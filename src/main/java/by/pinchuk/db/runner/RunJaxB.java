@@ -26,7 +26,6 @@ public class RunJaxB {
 		comp.setList(allCompany);
 		try {
 			JAXBContext context = JAXBContext.newInstance(Companies.class);
-			System.out.println("1111");
 			Marshaller marshaller = context.createMarshaller();
 			marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
 			marshaller.marshal(comp, new File(PATH));
