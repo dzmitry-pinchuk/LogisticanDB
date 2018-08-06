@@ -35,5 +35,6 @@ public class RunJaxB {
 			logger.log(Level.ERROR, "JAXBException: " + e.getMessage());
 		}
 		
+		// some code here
 	}
 }
