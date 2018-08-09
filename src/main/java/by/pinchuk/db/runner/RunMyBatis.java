@@ -44,6 +44,9 @@ public class RunMyBatis {
 //			ArrayList<Custom> allCust = (ArrayList<Custom>) cusMapper.allCustoms();
 //			System.out.println(allCust);
 			
+//			ArrayList<Custom> allCustByID = (ArrayList<Custom>) cusMapper.getCustomByLogistID(1);
+//			System.out.println(allCustByID);
+			
 		} catch (IOException e) {
 			logger.log(Level.ERROR, "IOException: " + e.getMessage());
 		}

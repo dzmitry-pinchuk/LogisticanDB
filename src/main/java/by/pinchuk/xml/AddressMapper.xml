@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper 
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="by.pinchuk.dao.addresses.IAddress">
+
+	<resultMap id="address" type="by.pinchuk.table.addresses.Address">
+		<id column="id" property="id"/>
+		<association property="country" column="countries_id" javaType="by.pinchuk.table.addresses.Country" select="by/pinchuk/xml/CountryMapper.selectById" fetchType="eager" />
+		<association property="city" column="cities_id" javaType="by.pinchuk.table.addresses.City" select="by/pinchuk/xml/CountryMapper.selectById" fetchType="eager" />
+		<association property="street" column="streets_id" javaType="by.pinchuk.table.addresses.Street" select="by/pinchuk/xml/CountryMapper.selectById" fetchType="eager" />
+
+	</resultMap>
+	
+	<select id="selectById" parameterType="java.lang.Long" resultMap="address">
+	   SELECT * FROM  mydb.adresses WHERE id=#{id}
+    </select>
+
+</mapper>     

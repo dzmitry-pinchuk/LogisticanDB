@@ -19,7 +19,9 @@
 	</environments> 
 	<mappers>
 		<mapper resource="by/pinchuk/xml/CustomMapper.xml"/>
-		
+		<mapper resource="by/pinchuk/xml/ConsigneeMapper.xml"/>
+		<mapper resource="by/pinchuk/xml/AddressMapper.xml"/>
+		<mapper resource="by/pinchuk/xml/CountryMapper.xml"/>
 		
 	</mappers>
 </configuration> 

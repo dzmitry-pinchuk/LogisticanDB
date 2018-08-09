@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper 
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="by.pinchuk.dao.addresses.ICountry">
+
+	<resultMap id="country" type="by.pinchuk.table.addresses.Country">
+		<id column="id" property="id"/>
+		<result column="country_name" property="countryName"/>
+		<result column="fare" property="fare"/>
+		<result column="road_quality" property="roadQuality"/>
+	</resultMap>
+	
+	<select id="allCountry" resultMap="country">
+        SELECT * FROM mydb.countries
+    </select>
+    
+    <select id="selectById" parameterType="java.lang.Long" resultMap="country">
+        SELECT * FROM mydb.countries WHERE id =#{id}
+    </select>
+	
+</mapper>     
