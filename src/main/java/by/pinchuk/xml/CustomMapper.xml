@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper 
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="by.pinchuk.dao.people.ICustom">
+
+	<resultMap id="custom" type="by.pinchuk.table.people.Custom">
+		<id column="id" property="id"/>
+		<result column="first_name" property="firstName"/>
+		<result column="last_name" property="lastName"/>
+	</resultMap>
+
+    <select id="allCustoms" resultMap="custom">
+        SELECT * FROM mydb.customs
+    </select>
+
+	<select id="selectById" parameterType="java.lang.Long" resultMap="custom">
+        SELECT * FROM mydb.customs WHERE id=#{id}
+    </select>	
+    
+	<delete id="deleteById" parameterType="java.lang.Long">
+    	DELETE FROM mydb.customs WHERE id = #{id}
+    </delete>
+    
+    <insert id="createNewCustom" parameterType="by.pinchuk.table.people.Custom" keyProperty="id" useGeneratedKeys="true">
+    	INSERT INTO mydb.customs (first_name, last_name, department, payment) VALUES (#{firstName},#{lastName},#{department},#{payment})
+    </insert>
+    
+     <select id="getCustomByLogistID" parameterType="java.lang.Long" resultMap="custom">
+        SELECT c.id, c.first_name, c.last_name, c.department, c.payment FROM mydb.logisticians_has_customs lhc LEFT JOIN mydb.customs c ON lhc.Customs_id = c.id WHERE lhc.Logisticians_id=#{id}
+    </select>
+
+</mapper>

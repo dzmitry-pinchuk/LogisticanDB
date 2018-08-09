@@ -216,7 +216,6 @@ public class CustomDAO extends JDBCAbstractDAO implements ICustom {
 		PreparedStatement ps = null;
 		ResultSet rs = null;
 		try {
-//			logger.log(Level.INFO, "try to create list getCustomByLogistID: ");
 			conn = getConnection();
 			ps = conn.prepareStatement(SQL_SELECT_CUSTOM_BY_LOGIST_ID);
 			ps.setLong(1, id);
@@ -228,7 +227,6 @@ public class CustomDAO extends JDBCAbstractDAO implements ICustom {
 			logger.log(Level.ERROR, "SQLException. Can not read from field: " + e);
 		} finally {
 			endOperation(ps, conn, rs);
-//			logger.log(Level.INFO, customs);
 		}
 		return customs;
 	}

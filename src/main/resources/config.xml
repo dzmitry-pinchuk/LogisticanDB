@@ -1,3 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE configuration 
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN" 
+        "http://mybatis.org/dtd/mybatis-3-config.dtd"> 
 <configuration> 
 	<properties resource="database.properties"> 
     </properties> 
@@ -8,14 +12,13 @@
 			<dataSource type="POOLED"> 
 				<property name="driver" value="${driver}"/> 
                 <property name="url" value="${url}"/> 
-                <property name="username" value="${username}"/> 
+                <property name="username" value="${user}"/> 
                 <property name="password" value="${password}"/> 
 			</dataSource> 
 		</environment> 
 	</environments> 
 	<mappers>
-		<mapper resource="path to xml">
-		
+		<mapper resource="by/pinchuk/xml/CustomMapper.xml"/>
 		
 		
 	</mappers>
