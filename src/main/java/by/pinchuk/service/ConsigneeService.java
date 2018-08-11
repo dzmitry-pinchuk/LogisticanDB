@@ -10,8 +10,8 @@ public class ConsigneeService {
 	private AddressDAO adrDAO = new AddressDAO();
 	
 	public Consignee setAddressConsignee(Consignee consignee) {
-		Address address = consignee.getAddress();
-		consignee.setAddress(adrDAO.selectById(address.getId()));
+		Address address = consignee.getAddressCon();
+		consignee.setAddressConn(adrDAO.selectById(address.getId()));
 		return consignee;
 	}
 

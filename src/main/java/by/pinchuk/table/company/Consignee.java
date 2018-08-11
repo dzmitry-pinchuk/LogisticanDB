@@ -1,13 +1,19 @@
 package by.pinchuk.table.company;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+
 import by.pinchuk.table.addresses.Address;
 import by.pinchuk.table.entity.BaseEntity;
 
+@XmlRootElement(name = "Consignee")
+@XmlAccessorType (XmlAccessType.FIELD)
 public class Consignee extends BaseEntity{
 	
 	private String consigneeName;
 	private String phoneNumber;
-	public Address address;
+	private Address address;
 	
 	public Consignee(String consigneeName, String phoneNumber, Address address) {
 		this.consigneeName = consigneeName;
@@ -27,13 +33,13 @@ public class Consignee extends BaseEntity{
 	public String getPhoneNumber() {
 		return phoneNumber;
 	}
-	public void setPhone_number(String phoneNumber) {
+	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
-	public Address getAddress() {
+	public Address getAddressCon() {
 		return address;
 	}
-	public void setAddress(Address address) {
+	public void setAddressConn(Address address) {
 		this.address = address;
 	}
 	

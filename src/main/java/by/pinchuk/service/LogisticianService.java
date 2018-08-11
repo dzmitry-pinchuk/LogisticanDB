@@ -22,7 +22,7 @@ public class LogisticianService {
 	
 	public Logistician setLogisticianField (Logistician logistican) {
 	
-		logistican.setCustoms(cDAO.getCustomByLogistID(logistican.getId()));
+		logistican.setCustomsList(cDAO.getCustomByLogistID(logistican.getId()));
 		
 		ArrayList<Shipper> shipperListByLogistID = sDAO.getShipperByLogistID(logistican.getId());
 //		for (Shipper shipper : shipperListByLogistID) {
@@ -32,17 +32,17 @@ public class LogisticianService {
 			Address address = shipper.getAddress();
 			shipper.setAddress(adrDAO.selectById(address.getId()));
 		}
-		logistican.setShipers(shipperListByLogistID);
+		logistican.setShipersList(shipperListByLogistID);
 		
 		ArrayList<Consignee> consigneeListByLogistID = conDAO.getConsigneeByLogistID(logistican.getId());
 //		for (Consignee consignee : consigneeListByLogistID) {
 //			cs.setAddressConsignee(consignee);
 //		}
 		for (Consignee consignee : consigneeListByLogistID) {
-			Address address = consignee.getAddress();
-			consignee.setAddress(adrDAO.selectById(address.getId()));
+			Address address = consignee.getAddressCon();
+			consignee.setAddressConn(adrDAO.selectById(address.getId()));
 		}
-		logistican.setConsignees(consigneeListByLogistID);
+		logistican.setConsigneesList(consigneeListByLogistID);
 		
 		return logistican;
 	}

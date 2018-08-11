@@ -3,14 +3,23 @@ package by.pinchuk.table.transport;
 import java.util.ArrayList;
 import java.util.Date;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import by.pinchuk.db.runner.JaxBDataAdapter;
 import by.pinchuk.table.company.Company;
 import by.pinchuk.table.entity.BaseEntity;
 import by.pinchuk.table.payment.CheckFare;
 import by.pinchuk.table.payment.RepairPrice;
 
+@XmlRootElement(name = "Track")
+@XmlAccessorType (XmlAccessType.FIELD)
 public class Track extends BaseEntity{
 	
 	private String brand;
@@ -20,6 +29,7 @@ public class Track extends BaseEntity{
 			shape = JsonFormat.Shape.STRING,
 			pattern = "MM/dd/yyyy"
 			)
+	@XmlJavaTypeAdapter(JaxBDataAdapter.class)
 	private Date dateOfService;
 	private int regNumber;
 	@JsonIgnore
@@ -86,6 +96,7 @@ public class Track extends BaseEntity{
 		this.repairPrices = repairPrices;
 	}
 	
+	@XmlTransient
 	public Company getCompany() {
 		return company;
 	}

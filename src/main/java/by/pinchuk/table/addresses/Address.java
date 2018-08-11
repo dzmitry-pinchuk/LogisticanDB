@@ -1,18 +1,22 @@
 package by.pinchuk.table.addresses;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+
 import by.pinchuk.table.entity.BaseEntity;
 
+@XmlRootElement
+@XmlAccessorType (XmlAccessType.FIELD)
 public class Address extends BaseEntity{
 	private Country country;
 	private City city;
 	private Street street;
 	
 	public Address() {
-		super();
 	}
 
 	public Address(Country country, City city, Street street) {
-		super();
 		this.country = country;
 		this.city = city;
 		this.street = street;

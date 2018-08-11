@@ -1,14 +1,21 @@
 package by.pinchuk.table.addresses;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+
 import by.pinchuk.table.entity.BaseEntity;
 
+@XmlRootElement
+@XmlAccessorType (XmlAccessType.FIELD)
 public class Country extends BaseEntity{
 
 	private String countryName;
 	private Integer fare;
 	private String roadQuality;
 	
-	public Country(String countryName, int fare, String roadQuality) {
+	public Country(long countryID, String countryName, int fare, String roadQuality) {
+		setId(countryID);
 		this.countryName = countryName;
 		this.fare = fare;
 		this.roadQuality = roadQuality;

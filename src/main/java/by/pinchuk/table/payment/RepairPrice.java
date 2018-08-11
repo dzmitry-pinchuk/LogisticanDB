@@ -2,28 +2,36 @@ package by.pinchuk.table.payment;
 
 import java.util.Date;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import by.pinchuk.db.runner.JaxBDataAdapter;
 import by.pinchuk.table.entity.BaseEntity;
 import by.pinchuk.table.people.Driver;
 import by.pinchuk.table.transport.Service;
 import by.pinchuk.table.transport.Track;
 
+@XmlRootElement(name = "RepairPrice")
+@XmlAccessorType (XmlAccessType.FIELD)
 public class RepairPrice extends BaseEntity {
 	
 	private Service service;
 	@JsonIgnore
+	@XmlTransient
 	private Track track;
 	@JsonFormat(
 			shape = JsonFormat.Shape.STRING,
 			pattern = "MM/dd/yyyy"
 			)
+	@XmlJavaTypeAdapter(JaxBDataAdapter.class)
 	private Date date;
 	private Driver driver;
-
-	
-	
 
 	public RepairPrice(Service service, Track track, Date date, Driver driver1) {
 		super();
@@ -36,14 +44,6 @@ public class RepairPrice extends BaseEntity {
 	public RepairPrice() {
 		// TODO Auto-generated constructor stub
 	}
-
-//	public int getServiceID() {
-//		return serviceID;
-//	}
-//
-//	public void setServiceID(int serviceID) {
-//		this.serviceID = serviceID;
-//	}
 	
 	public Service getService() {
 		return service;
@@ -53,6 +53,7 @@ public class RepairPrice extends BaseEntity {
 		this.service = service;
 	}
 
+	@XmlTransient
 	public Track getTrack() {
 		return track;
 	}

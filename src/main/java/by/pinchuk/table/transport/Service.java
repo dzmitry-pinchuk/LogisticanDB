@@ -1,8 +1,14 @@
 package by.pinchuk.table.transport;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+
 import by.pinchuk.table.addresses.Address;
 import by.pinchuk.table.entity.BaseEntity;
 
+@XmlRootElement(name = "Service")
+@XmlAccessorType (XmlAccessType.FIELD)
 public class Service extends BaseEntity {
 	
 	private String serviceName;

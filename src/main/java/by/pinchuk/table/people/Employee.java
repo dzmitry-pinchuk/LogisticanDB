@@ -1,10 +1,17 @@
 package by.pinchuk.table.people;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import by.pinchuk.table.company.Company;
 import by.pinchuk.table.entity.BaseEntity;
 
+@XmlRootElement
+@XmlAccessorType (XmlAccessType.FIELD)
 public abstract class Employee extends BaseEntity {
 	 
 	private String firstName;
@@ -22,6 +29,7 @@ public abstract class Employee extends BaseEntity {
 		this.salary = salary;
 	}
 	
+	@XmlTransient
 	public Company getCompany() {
 		return company;
 	}

@@ -2,6 +2,13 @@ package by.pinchuk.table.company;
 
 import java.util.ArrayList;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
+
 import by.pinchuk.table.addresses.Address;
 import by.pinchuk.table.entity.BaseEntity;
 import by.pinchuk.table.people.Driver;
@@ -9,18 +16,23 @@ import by.pinchuk.table.people.Driver;
 import by.pinchuk.table.people.Logistician;
 import by.pinchuk.table.transport.Track;
 
+@XmlRootElement(name = "Company")
+@XmlAccessorType (XmlAccessType.FIELD)
+@XmlType(propOrder = {"name", "regNumber", "address", "logistican",  "driver", "tracks"})
 public class Company extends BaseEntity{
 	
 	private String name;
 	private String regNumber;
 	private Address address;
-//	private ArrayList<? extends Employee> employees;
-//	private ArrayList<Employee> employees = new ArrayList<>();
+	@XmlElementWrapper(name="tracks")
+	@XmlElement(name="track")
 	private ArrayList<Track> tracks;
+	@XmlElementWrapper(name="logisticans")
+	@XmlElement(name="logistican")
 	private ArrayList<Logistician> logistican;
+	@XmlElementWrapper(name="drivers")
+	@XmlElement(name="driver")
 	private ArrayList<Driver> driver;
-	
-//	private ArrayList<ArrayList<? extends Employee>> employees = new ArrayList<>();
 	
 	public String getName() {
 		return name;
@@ -46,25 +58,7 @@ public class Company extends BaseEntity{
 		this.address = address;
 	}
 	
-//	public ArrayList<ArrayList<? extends Employee>> getEmployees() {
-//		return employees;
-//	}
-	
-//	public void setEmployees(ArrayList<ArrayList<? extends Employee>> employees) {
-//		this.employees = employees;
-//	}
-	
-//	public void setAllEmployee(ArrayList<Logistician> logisticans, ArrayList<Driver> drivers) {
-//		this.employees.add(logisticans);
-//		this.employees.add(drivers);
-		
-//		this.employees.get(0).addAll(logisticans);
-//		this.employees.get(1).addAll(drivers);
-//		this.employees.addAll(logisticans);
-//		this.employees.addAll(drivers);
-//	}
-	
-	public ArrayList<Track> getTracks() {
+	public ArrayList<Track> getTracksList() {
 		return tracks;
 	}
 	
@@ -84,7 +78,7 @@ public class Company extends BaseEntity{
 		this.driver = driver;
 	}
 
-	public void setTracks(ArrayList<Track> tracks) {
+	public void setTracksList(ArrayList<Track> tracks) {
 		this.tracks = tracks;
 	}
 	

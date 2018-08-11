@@ -1,7 +1,13 @@
 package by.pinchuk.table.people;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+
 import by.pinchuk.table.entity.BaseEntity;
 
+@XmlRootElement(name = "Custom")
+@XmlAccessorType (XmlAccessType.FIELD)
 public class Custom extends BaseEntity {
 	
 	private String firstName;

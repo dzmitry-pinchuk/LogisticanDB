@@ -81,11 +81,11 @@ public class ConsigneeDAO extends JDBCAbstractDAO implements IConsignee {
 //			AddressDAO adrDAO = new AddressDAO();
 			consignee.setId(rs.getInt("id"));
 			consignee.setConsigneeName(rs.getString("consignee_name"));
-			consignee.setPhone_number(rs.getString("phone_number"));
+			consignee.setPhoneNumber(rs.getString("phone_number"));
 //			consignee.setAdress(adrDAO.selectById(rs.getInt("Adresses_id")));
 			Address address = new Address();
 			address.setId(rs.getInt("Adresses_id"));
-			consignee.setAddress(address);
+			consignee.setAddressConn(address);
 		} catch (SQLException e) {
 			logger.log(Level.ERROR, "SQLException. Can not reaf from ResultSet: " + e);
 		}

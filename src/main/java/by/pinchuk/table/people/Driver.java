@@ -2,14 +2,24 @@ package by.pinchuk.table.people;
 
 import java.util.Date;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+
 import com.fasterxml.jackson.annotation.JsonFormat;
 
+import by.pinchuk.db.runner.JaxBDataAdapter;
+
+@XmlRootElement(name = "Driver")
+@XmlAccessorType (XmlAccessType.FIELD)
 public class Driver extends Employee{
 	
 	@JsonFormat(
 			shape = JsonFormat.Shape.STRING,
 			pattern = "MM/dd/yyyy"
 			)
+	@XmlJavaTypeAdapter(JaxBDataAdapter.class)
 	private Date licenseYear;
 	
 	public Driver() {

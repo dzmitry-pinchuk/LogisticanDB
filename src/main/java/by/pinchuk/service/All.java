@@ -20,7 +20,7 @@ public class All {
 		for (Company company : allCompany) {
 			cs.setCompanyField(company);
 		}
-		logger.log(Level.INFO, allCompany);
+//		logger.log(Level.INFO, allCompany);
 		return allCompany;
 	}
 

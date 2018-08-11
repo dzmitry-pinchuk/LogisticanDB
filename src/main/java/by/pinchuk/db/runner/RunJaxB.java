@@ -19,7 +19,8 @@ public class RunJaxB {
 
 	public static void main(String[] args) {
 		Logger logger = LogManager.getLogger();
-		final String PATH = "src\\main\\resources\\data.xml";
+//		final String PATH = "src\\main\\resources\\data.xml";
+		final String PATH = "src/main/resources/GaxBGenerated.xml";
 		All all = new All();
 		ArrayList<Company> allCompany = all.getAll();
 		Companies comp = new Companies();
@@ -29,10 +30,12 @@ public class RunJaxB {
 			Marshaller marshaller = context.createMarshaller();
 			marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
 			marshaller.marshal(comp, new File(PATH));
-			
+			logger.log(Level.INFO, "All done");
 		} catch (JAXBException e) {
-			logger.log(Level.ERROR, "JAXBException: " + e.getMessage());
+			logger.log(Level.ERROR, "JAXBException: " + e);
 		}
+		
+		System.out.println(allCompany.get(0).getAddress().getCity().getId());
 		
 		// some code here
 	}

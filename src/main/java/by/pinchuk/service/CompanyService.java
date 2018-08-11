@@ -74,26 +74,26 @@ public class CompanyService {
 			track.setCheckFares(allCheckFaresByTrackID);
 			track1 = track;
 		}
-		company.setTracks(allTrackByCompany);
+		company.setTracksList(allTrackByCompany);
 		
 		ArrayList<Logistician> allLogisticianByCompany = lDAO.allLogistician();
 		for (Logistician logistician1 : allLogisticianByCompany) {
 			Logistician logistican = logistician1;
 			
-			logistican.setCustoms(cusDAO.getCustomByLogistID(logistican.getId()));
+			logistican.setCustomsList(cusDAO.getCustomByLogistID(logistican.getId()));
 			
 			ArrayList<Shipper> shipperListByLogistID = shDAO.getShipperByLogistID(logistican.getId());
 			for (Shipper shipper : shipperListByLogistID) {
 				Address address2 = shipper.getAddress();
 				shipper.setAddress(adrDAO.selectById(address2.getId()));
 			}
-			logistican.setShipers(shipperListByLogistID);
+			logistican.setShipersList(shipperListByLogistID);
 			ArrayList<Consignee> consigneeListByLogistID = conDAO.getConsigneeByLogistID(logistican.getId());
 			for (Consignee consignee : consigneeListByLogistID) {
-				Address address3 = consignee.getAddress();
-				consignee.setAddress(adrDAO.selectById(address3.getId()));
+				Address address3 = consignee.getAddressCon();
+				consignee.setAddressConn(adrDAO.selectById(address3.getId()));
 			}
-			logistican.setConsignees(consigneeListByLogistID);
+			logistican.setConsigneesList(consigneeListByLogistID);
 			
 			logistician1 = logistican;
 		}

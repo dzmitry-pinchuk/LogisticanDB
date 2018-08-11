@@ -19,8 +19,8 @@ import by.pinchuk.table.addresses.Street;
 public class AddressDAO extends JDBCAbstractDAO implements IAddress{
 	
 	private static Logger logger = LogManager.getLogger();
-	private static final String SQL_SELECT_ALL_ADDRESSES = "SELECT adr.id, c.country_name, c.fare, c.road_quality, ct.cities_name, s.street_name FROM adresses adr LEFT JOIN countries c ON adr.countries_id = c.id LEFT JOIN cities ct ON adr.cities_id = ct.id LEFT JOIN streets s ON adr.streets_id = s.id;";
-	private static final String SQL_SELECT_BY_ID = "SELECT adr.id, c.country_name, c.fare, c.road_quality, ct.cities_name, s.street_name FROM adresses adr LEFT JOIN countries c ON adr.countries_id = c.id LEFT JOIN cities ct ON adr.cities_id = ct.id LEFT JOIN streets s ON adr.streets_id = s.id WHERE adr.ID=?";
+	private static final String SQL_SELECT_ALL_ADDRESSES = "SELECT adr.id, c.id, c.country_name, c.fare, c.road_quality, ct.id, ct.cities_name, s.id, s.street_name  FROM adresses adr LEFT JOIN countries c ON adr.countries_id = c.id LEFT JOIN cities ct ON adr.cities_id = ct.id LEFT JOIN streets s ON adr.streets_id = s.id";
+	private static final String SQL_SELECT_BY_ID = "SELECT adr.id, c.id, c.country_name, c.fare, c.road_quality, ct.id, ct.cities_name, s.id, s.street_name  FROM adresses adr LEFT JOIN countries c ON adr.countries_id = c.id LEFT JOIN cities ct ON adr.cities_id = ct.id LEFT JOIN streets s ON adr.streets_id = s.id WHERE adr.ID=?";
 	private static final String SQL_DELETE_BY_ID = "DELETE FROM adresses WHERE id = ?";
 	private static final String SQL_CREATE_NEW_ADDRESS = "INSERT INTO adresses (countries_id, cities_id, streets_id) VALUES (?, ?, ?)";
 	private static final String SQL_CREATE_NEW_COUNTRY = "INSERT INTO countries (country_name) VALUES (?)";
@@ -74,9 +74,9 @@ public class AddressDAO extends JDBCAbstractDAO implements IAddress{
 		Address address = new Address();
 		try {			
 			address.setId(rs.getInt("id"));
-			address.setCountry(new Country(rs.getString("country_name"), rs.getInt("fare"), rs.getString("road_quality")));
-			address.setCity(new City(rs.getString("cities_name")));
-			address.setStreet(new Street(rs.getString("street_name")));			
+			address.setCountry(new Country(rs.getLong(2), rs.getString("country_name"), rs.getInt("fare"), rs.getString("road_quality")));
+			address.setCity(new City(rs.getLong(6), rs.getString("cities_name")));
+			address.setStreet(new Street(rs.getLong(8), rs.getString("street_name")));			
 		} catch (SQLException e) {
 			logger.log(Level.ERROR, "SQLException. Can not reaf from ResultSet: " + e);
 		}

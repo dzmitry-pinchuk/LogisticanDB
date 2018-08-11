@@ -1,0 +1,995 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<companies>
+    <Company>
+        <id>1</id>
+        <name>koleso</name>
+        <regNumber>123123</regNumber>
+        <address>
+            <id>2</id>
+            <country>
+                <id>2</id>
+                <countryName>russia</countryName>
+                <fare>200</fare>
+                <roadQuality>bad</roadQuality>
+            </country>
+            <city>
+                <id>2</id>
+                <cityName>brest</cityName>
+            </city>
+            <street>
+                <id>2</id>
+                <streetName>nezavisimosti</streetName>
+            </street>
+        </address>
+        <logisticans>
+            <logistican>
+                <id>1</id>
+                <firstName>ivan</firstName>
+                <lastName>ivanov</lastName>
+                <salary>700</salary>
+                <yearOfStartWork>01/01/2008</yearOfStartWork>
+                <consignees>
+                    <consignee>
+                        <id>3</id>
+                        <consigneeName>gallery</consigneeName>
+                        <phoneNumber>135</phoneNumber>
+                        <address>
+                            <id>6</id>
+                            <country>
+<id>6</id>
+<countryName>germany</countryName>
+<fare>500</fare>
+<roadQuality>good</roadQuality>
+                            </country>
+                            <city>
+<id>6</id>
+<cityName>lvov</cityName>
+                            </city>
+                            <street>
+<id>6</id>
+<streetName>red square</streetName>
+                            </street>
+                        </address>
+                    </consignee>
+                </consignees>
+                <shipers>
+                    <shiper>
+                        <id>1</id>
+                        <shipperName>nike</shipperName>
+                        <phoneNumber>12345</phoneNumber>
+                        <address>
+                            <id>1</id>
+                            <country>
+<id>1</id>
+<countryName>belarus</countryName>
+<fare>100</fare>
+<roadQuality>good</roadQuality>
+                            </country>
+                            <city>
+<id>1</id>
+<cityName>minsk</cityName>
+                            </city>
+                            <street>
+<id>1</id>
+<streetName>polevaya</streetName>
+                            </street>
+                        </address>
+                    </shiper>
+                    <shiper>
+                        <id>5</id>
+                        <shipperName>bmw</shipperName>
+                        <phoneNumber>99432</phoneNumber>
+                        <address>
+                            <id>2</id>
+                            <country>
+<id>2</id>
+<countryName>russia</countryName>
+<fare>200</fare>
+<roadQuality>bad</roadQuality>
+                            </country>
+                            <city>
+<id>2</id>
+<cityName>brest</cityName>
+                            </city>
+                            <street>
+<id>2</id>
+<streetName>nezavisimosti</streetName>
+                            </street>
+                        </address>
+                    </shiper>
+                </shipers>
+                <customs>
+                    <custom>
+                        <id>5</id>
+                        <firstName>luba</firstName>
+                        <lastName>vaskina</lastName>
+                        <department>3</department>
+                        <payment>547</payment>
+                    </custom>
+                    <custom>
+                        <id>4</id>
+                        <firstName>sveta</firstName>
+                        <lastName>petkina</lastName>
+                        <department>3</department>
+                        <payment>214</payment>
+                    </custom>
+                    <custom>
+                        <id>3</id>
+                        <firstName>katia</firstName>
+                        <lastName>sidorova</lastName>
+                        <department>2</department>
+                        <payment>124</payment>
+                    </custom>
+                    <custom>
+                        <id>11</id>
+                        <firstName>vasia</firstName>
+                        <lastName>ivanov</lastName>
+                        <department>4</department>
+                        <payment>1254</payment>
+                    </custom>
+                </customs>
+            </logistican>
+            <logistican>
+                <id>2</id>
+                <firstName>petr</firstName>
+                <lastName>petrov</lastName>
+                <salary>400</salary>
+                <yearOfStartWork>01/01/2007</yearOfStartWork>
+                <consignees>
+                    <consignee>
+                        <id>2</id>
+                        <consigneeName>factory</consigneeName>
+                        <phoneNumber>236241</phoneNumber>
+                        <address>
+                            <id>5</id>
+                            <country>
+<id>5</id>
+<countryName>france</countryName>
+<fare>350</fare>
+<roadQuality>normal</roadQuality>
+                            </country>
+                            <city>
+<id>5</id>
+<cityName>kiev</cityName>
+                            </city>
+                            <street>
+<id>5</id>
+<streetName>pobediteley</streetName>
+                            </street>
+                        </address>
+                    </consignee>
+                    <consignee>
+                        <id>3</id>
+                        <consigneeName>gallery</consigneeName>
+                        <phoneNumber>135</phoneNumber>
+                        <address>
+                            <id>6</id>
+                            <country>
+<id>6</id>
+<countryName>germany</countryName>
+<fare>500</fare>
+<roadQuality>good</roadQuality>
+                            </country>
+                            <city>
+<id>6</id>
+<cityName>lvov</cityName>
+                            </city>
+                            <street>
+<id>6</id>
+<streetName>red square</streetName>
+                            </street>
+                        </address>
+                    </consignee>
+                </consignees>
+                <shipers>
+                    <shiper>
+                        <id>3</id>
+                        <shipperName>adidas</shipperName>
+                        <phoneNumber>463542</phoneNumber>
+                        <address>
+                            <id>3</id>
+                            <country>
+<id>3</id>
+<countryName>ukraine</countryName>
+<fare>300</fare>
+<roadQuality>normal</roadQuality>
+                            </country>
+                            <city>
+<id>3</id>
+<cityName>vitebsk</cityName>
+                            </city>
+                            <street>
+<id>3</id>
+<streetName>partizansky</streetName>
+                            </street>
+                        </address>
+                    </shiper>
+                </shipers>
+                <customs>
+                    <custom>
+                        <id>5</id>
+                        <firstName>luba</firstName>
+                        <lastName>vaskina</lastName>
+                        <department>3</department>
+                        <payment>547</payment>
+                    </custom>
+                    <custom>
+                        <id>4</id>
+                        <firstName>sveta</firstName>
+                        <lastName>petkina</lastName>
+                        <department>3</department>
+                        <payment>214</payment>
+                    </custom>
+                    <custom>
+                        <id>3</id>
+                        <firstName>katia</firstName>
+                        <lastName>sidorova</lastName>
+                        <department>2</department>
+                        <payment>124</payment>
+                    </custom>
+                    <custom>
+                        <id>11</id>
+                        <firstName>vasia</firstName>
+                        <lastName>ivanov</lastName>
+                        <department>4</department>
+                        <payment>1254</payment>
+                    </custom>
+                </customs>
+            </logistican>
+            <logistican>
+                <id>3</id>
+                <firstName>vania</firstName>
+                <lastName>zuk</lastName>
+                <salary>543</salary>
+                <yearOfStartWork>01/01/2000</yearOfStartWork>
+                <consignees>
+                    <consignee>
+                        <id>1</id>
+                        <consigneeName>shop</consigneeName>
+                        <phoneNumber>33253247</phoneNumber>
+                        <address>
+                            <id>4</id>
+                            <country>
+<id>4</id>
+<countryName>poland</countryName>
+<fare>400</fare>
+<roadQuality>good</roadQuality>
+                            </country>
+                            <city>
+<id>4</id>
+<cityName>moskow</cityName>
+                            </city>
+                            <street>
+<id>4</id>
+<streetName>skoriny</streetName>
+                            </street>
+                        </address>
+                    </consignee>
+                    <consignee>
+                        <id>3</id>
+                        <consigneeName>gallery</consigneeName>
+                        <phoneNumber>135</phoneNumber>
+                        <address>
+                            <id>6</id>
+                            <country>
+<id>6</id>
+<countryName>germany</countryName>
+<fare>500</fare>
+<roadQuality>good</roadQuality>
+                            </country>
+                            <city>
+<id>6</id>
+<cityName>lvov</cityName>
+                            </city>
+                            <street>
+<id>6</id>
+<streetName>red square</streetName>
+                            </street>
+                        </address>
+                    </consignee>
+                </consignees>
+                <shipers>
+                    <shiper>
+                        <id>2</id>
+                        <shipperName>puma</shipperName>
+                        <phoneNumber>32367</phoneNumber>
+                        <address>
+                            <id>2</id>
+                            <country>
+<id>2</id>
+<countryName>russia</countryName>
+<fare>200</fare>
+<roadQuality>bad</roadQuality>
+                            </country>
+                            <city>
+<id>2</id>
+<cityName>brest</cityName>
+                            </city>
+                            <street>
+<id>2</id>
+<streetName>nezavisimosti</streetName>
+                            </street>
+                        </address>
+                    </shiper>
+                </shipers>
+                <customs>
+                    <custom>
+                        <id>5</id>
+                        <firstName>luba</firstName>
+                        <lastName>vaskina</lastName>
+                        <department>3</department>
+                        <payment>547</payment>
+                    </custom>
+                    <custom>
+                        <id>4</id>
+                        <firstName>sveta</firstName>
+                        <lastName>petkina</lastName>
+                        <department>3</department>
+                        <payment>214</payment>
+                    </custom>
+                    <custom>
+                        <id>3</id>
+                        <firstName>katia</firstName>
+                        <lastName>sidorova</lastName>
+                        <department>2</department>
+                        <payment>124</payment>
+                    </custom>
+                    <custom>
+                        <id>11</id>
+                        <firstName>vasia</firstName>
+                        <lastName>ivanov</lastName>
+                        <department>4</department>
+                        <payment>1254</payment>
+                    </custom>
+                </customs>
+            </logistican>
+            <logistican>
+                <id>4</id>
+                <firstName>lesha</firstName>
+                <lastName>sidorov</lastName>
+                <salary>23634</salary>
+                <yearOfStartWork>01/01/2010</yearOfStartWork>
+                <consignees>
+                    <consignee>
+                        <id>3</id>
+                        <consigneeName>gallery</consigneeName>
+                        <phoneNumber>135</phoneNumber>
+                        <address>
+                            <id>6</id>
+                            <country>
+<id>6</id>
+<countryName>germany</countryName>
+<fare>500</fare>
+<roadQuality>good</roadQuality>
+                            </country>
+                            <city>
+<id>6</id>
+<cityName>lvov</cityName>
+                            </city>
+                            <street>
+<id>6</id>
+<streetName>red square</streetName>
+                            </street>
+                        </address>
+                    </consignee>
+                </consignees>
+                <shipers>
+                    <shiper>
+                        <id>4</id>
+                        <shipperName>tesla</shipperName>
+                        <phoneNumber>6543</phoneNumber>
+                        <address>
+                            <id>1</id>
+                            <country>
+<id>1</id>
+<countryName>belarus</countryName>
+<fare>100</fare>
+<roadQuality>good</roadQuality>
+                            </country>
+                            <city>
+<id>1</id>
+<cityName>minsk</cityName>
+                            </city>
+                            <street>
+<id>1</id>
+<streetName>polevaya</streetName>
+                            </street>
+                        </address>
+                    </shiper>
+                </shipers>
+                <customs>
+                    <custom>
+                        <id>5</id>
+                        <firstName>luba</firstName>
+                        <lastName>vaskina</lastName>
+                        <department>3</department>
+                        <payment>547</payment>
+                    </custom>
+                    <custom>
+                        <id>4</id>
+                        <firstName>sveta</firstName>
+                        <lastName>petkina</lastName>
+                        <department>3</department>
+                        <payment>214</payment>
+                    </custom>
+                    <custom>
+                        <id>3</id>
+                        <firstName>katia</firstName>
+                        <lastName>sidorova</lastName>
+                        <department>2</department>
+                        <payment>124</payment>
+                    </custom>
+                    <custom>
+                        <id>11</id>
+                        <firstName>vasia</firstName>
+                        <lastName>ivanov</lastName>
+                        <department>4</department>
+                        <payment>1254</payment>
+                    </custom>
+                </customs>
+            </logistican>
+            <logistican>
+                <id>5</id>
+                <firstName>igor</firstName>
+                <lastName>vasin</lastName>
+                <salary>5837</salary>
+                <yearOfStartWork>01/01/2018</yearOfStartWork>
+                <consignees>
+                    <consignee>
+                        <id>2</id>
+                        <consigneeName>factory</consigneeName>
+                        <phoneNumber>236241</phoneNumber>
+                        <address>
+                            <id>5</id>
+                            <country>
+<id>5</id>
+<countryName>france</countryName>
+<fare>350</fare>
+<roadQuality>normal</roadQuality>
+                            </country>
+                            <city>
+<id>5</id>
+<cityName>kiev</cityName>
+                            </city>
+                            <street>
+<id>5</id>
+<streetName>pobediteley</streetName>
+                            </street>
+                        </address>
+                    </consignee>
+                </consignees>
+                <shipers>
+                    <shiper>
+                        <id>5</id>
+                        <shipperName>bmw</shipperName>
+                        <phoneNumber>99432</phoneNumber>
+                        <address>
+                            <id>2</id>
+                            <country>
+<id>2</id>
+<countryName>russia</countryName>
+<fare>200</fare>
+<roadQuality>bad</roadQuality>
+                            </country>
+                            <city>
+<id>2</id>
+<cityName>brest</cityName>
+                            </city>
+                            <street>
+<id>2</id>
+<streetName>nezavisimosti</streetName>
+                            </street>
+                        </address>
+                    </shiper>
+                </shipers>
+                <customs>
+                    <custom>
+                        <id>5</id>
+                        <firstName>luba</firstName>
+                        <lastName>vaskina</lastName>
+                        <department>3</department>
+                        <payment>547</payment>
+                    </custom>
+                    <custom>
+                        <id>4</id>
+                        <firstName>sveta</firstName>
+                        <lastName>petkina</lastName>
+                        <department>3</department>
+                        <payment>214</payment>
+                    </custom>
+                    <custom>
+                        <id>3</id>
+                        <firstName>katia</firstName>
+                        <lastName>sidorova</lastName>
+                        <department>2</department>
+                        <payment>124</payment>
+                    </custom>
+                    <custom>
+                        <id>11</id>
+                        <firstName>vasia</firstName>
+                        <lastName>ivanov</lastName>
+                        <department>4</department>
+                        <payment>1254</payment>
+                    </custom>
+                </customs>
+            </logistican>
+        </logisticans>
+        <drivers>
+            <driver>
+                <id>1</id>
+                <firstName>petia</firstName>
+                <lastName>poroshenko</lastName>
+                <salary>1000000</salary>
+                <licenseYear>01/01/2000</licenseYear>
+            </driver>
+            <driver>
+                <id>2</id>
+                <firstName>masha</firstName>
+                <lastName>ivanova</lastName>
+                <salary>2356</salary>
+                <licenseYear>01/01/2014</licenseYear>
+            </driver>
+            <driver>
+                <id>3</id>
+                <firstName>vasia</firstName>
+                <lastName>pupkin</lastName>
+                <salary>5585</salary>
+                <licenseYear>01/01/2011</licenseYear>
+            </driver>
+            <driver>
+                <id>4</id>
+                <firstName>vova</firstName>
+                <lastName>putin</lastName>
+                <salary>666</salary>
+                <licenseYear>01/01/1997</licenseYear>
+            </driver>
+            <driver>
+                <id>5</id>
+                <firstName>sasha</firstName>
+                <lastName>lukashenko</lastName>
+                <salary>500</salary>
+                <licenseYear>01/01/1989</licenseYear>
+            </driver>
+        </drivers>
+        <tracks>
+            <track>
+                <id>1</id>
+                <brand>mb</brand>
+                <model>axor</model>
+                <carryingCapacity>20</carryingCapacity>
+                <dateOfService>01/01/2000</dateOfService>
+                <regNumber>1234</regNumber>
+                <checkFares>
+                    <id>1</id>
+                    <country>
+                        <id>1</id>
+                        <countryName>belarus</countryName>
+                        <fare>100</fare>
+                        <roadQuality>good</roadQuality>
+                    </country>
+                    <date>01/01/2000</date>
+                    <driver>
+                        <id>1</id>
+                        <firstName>petia</firstName>
+                        <lastName>poroshenko</lastName>
+                        <salary>1000000</salary>
+                        <licenseYear>01/01/2000</licenseYear>
+                    </driver>
+                </checkFares>
+                <repairPrices>
+                    <id>1</id>
+                    <service>
+                        <id>1</id>
+                        <serviceName>sto</serviceName>
+                        <phoneNumber>12134</phoneNumber>
+                        <address>
+                            <id>8</id>
+                            <country>
+<id>1</id>
+<countryName>belarus</countryName>
+<fare>100</fare>
+<roadQuality>good</roadQuality>
+                            </country>
+                            <city>
+<id>1</id>
+<cityName>minsk</cityName>
+                            </city>
+                            <street>
+<id>5</id>
+<streetName>pobediteley</streetName>
+                            </street>
+                        </address>
+                    </service>
+                    <date>01/01/2012</date>
+                    <driver>
+                        <id>1</id>
+                        <firstName>petia</firstName>
+                        <lastName>poroshenko</lastName>
+                        <salary>1000000</salary>
+                        <licenseYear>01/01/2000</licenseYear>
+                    </driver>
+                </repairPrices>
+            </track>
+            <track>
+                <id>2</id>
+                <brand>volvo</brand>
+                <model>100</model>
+                <carryingCapacity>15</carryingCapacity>
+                <dateOfService>01/01/2010</dateOfService>
+                <regNumber>3332</regNumber>
+                <checkFares>
+                    <id>5</id>
+                    <country>
+                        <id>3</id>
+                        <countryName>ukraine</countryName>
+                        <fare>300</fare>
+                        <roadQuality>normal</roadQuality>
+                    </country>
+                    <date>01/01/2015</date>
+                    <driver>
+                        <id>1</id>
+                        <firstName>petia</firstName>
+                        <lastName>poroshenko</lastName>
+                        <salary>1000000</salary>
+                        <licenseYear>01/01/2000</licenseYear>
+                    </driver>
+                </checkFares>
+                <repairPrices>
+                    <id>2</id>
+                    <service>
+                        <id>1</id>
+                        <serviceName>sto</serviceName>
+                        <phoneNumber>12134</phoneNumber>
+                        <address>
+                            <id>8</id>
+                            <country>
+<id>1</id>
+<countryName>belarus</countryName>
+<fare>100</fare>
+<roadQuality>good</roadQuality>
+                            </country>
+                            <city>
+<id>1</id>
+<cityName>minsk</cityName>
+                            </city>
+                            <street>
+<id>5</id>
+<streetName>pobediteley</streetName>
+                            </street>
+                        </address>
+                    </service>
+                    <date>01/01/2013</date>
+                    <driver>
+                        <id>2</id>
+                        <firstName>masha</firstName>
+                        <lastName>ivanova</lastName>
+                        <salary>2356</salary>
+                        <licenseYear>01/01/2014</licenseYear>
+                    </driver>
+                </repairPrices>
+            </track>
+            <track>
+                <id>3</id>
+                <brand>volvo</brand>
+                <model>fh</model>
+                <carryingCapacity>10</carryingCapacity>
+                <dateOfService>01/01/2015</dateOfService>
+                <regNumber>5478</regNumber>
+                <checkFares>
+                    <id>6</id>
+                    <country>
+                        <id>4</id>
+                        <countryName>poland</countryName>
+                        <fare>400</fare>
+                        <roadQuality>good</roadQuality>
+                    </country>
+                    <date>01/01/2014</date>
+                    <driver>
+                        <id>2</id>
+                        <firstName>masha</firstName>
+                        <lastName>ivanova</lastName>
+                        <salary>2356</salary>
+                        <licenseYear>01/01/2014</licenseYear>
+                    </driver>
+                </checkFares>
+                <checkFares>
+                    <id>22</id>
+                    <country>
+                        <id>4</id>
+                        <countryName>poland</countryName>
+                        <fare>400</fare>
+                        <roadQuality>good</roadQuality>
+                    </country>
+                    <date>01/01/2018</date>
+                    <driver>
+                        <id>1</id>
+                        <firstName>petia</firstName>
+                        <lastName>poroshenko</lastName>
+                        <salary>1000000</salary>
+                        <licenseYear>01/01/2000</licenseYear>
+                    </driver>
+                </checkFares>
+                <checkFares>
+                    <id>23</id>
+                    <country>
+                        <id>4</id>
+                        <countryName>poland</countryName>
+                        <fare>400</fare>
+                        <roadQuality>good</roadQuality>
+                    </country>
+                    <date>01/01/2018</date>
+                    <driver>
+                        <id>1</id>
+                        <firstName>petia</firstName>
+                        <lastName>poroshenko</lastName>
+                        <salary>1000000</salary>
+                        <licenseYear>01/01/2000</licenseYear>
+                    </driver>
+                </checkFares>
+                <repairPrices>
+                    <id>6</id>
+                    <service>
+                        <id>3</id>
+                        <serviceName>shinomontazh</serviceName>
+                        <phoneNumber>4521</phoneNumber>
+                        <address>
+                            <id>8</id>
+                            <country>
+<id>1</id>
+<countryName>belarus</countryName>
+<fare>100</fare>
+<roadQuality>good</roadQuality>
+                            </country>
+                            <city>
+<id>1</id>
+<cityName>minsk</cityName>
+                            </city>
+                            <street>
+<id>5</id>
+<streetName>pobediteley</streetName>
+                            </street>
+                        </address>
+                    </service>
+                    <date>01/01/2015</date>
+                    <driver>
+                        <id>4</id>
+                        <firstName>vova</firstName>
+                        <lastName>putin</lastName>
+                        <salary>666</salary>
+                        <licenseYear>01/01/1997</licenseYear>
+                    </driver>
+                </repairPrices>
+                <repairPrices>
+                    <id>7</id>
+                    <service>
+                        <id>2</id>
+                        <serviceName>diselservis</serviceName>
+                        <phoneNumber>1234</phoneNumber>
+                        <address>
+                            <id>9</id>
+                            <country>
+<id>1</id>
+<countryName>belarus</countryName>
+<fare>100</fare>
+<roadQuality>good</roadQuality>
+                            </country>
+                            <city>
+<id>1</id>
+<cityName>minsk</cityName>
+                            </city>
+                            <street>
+<id>4</id>
+<streetName>skoriny</streetName>
+                            </street>
+                        </address>
+                    </service>
+                    <date>01/01/2017</date>
+                    <driver>
+                        <id>5</id>
+                        <firstName>sasha</firstName>
+                        <lastName>lukashenko</lastName>
+                        <salary>500</salary>
+                        <licenseYear>01/01/1989</licenseYear>
+                    </driver>
+                </repairPrices>
+                <repairPrices>
+                    <id>11</id>
+                    <service>
+                        <id>1</id>
+                        <serviceName>sto</serviceName>
+                        <phoneNumber>12134</phoneNumber>
+                        <address>
+                            <id>8</id>
+                            <country>
+<id>1</id>
+<countryName>belarus</countryName>
+<fare>100</fare>
+<roadQuality>good</roadQuality>
+                            </country>
+                            <city>
+<id>1</id>
+<cityName>minsk</cityName>
+                            </city>
+                            <street>
+<id>5</id>
+<streetName>pobediteley</streetName>
+                            </street>
+                        </address>
+                    </service>
+                    <date>01/01/2018</date>
+                    <driver>
+                        <id>3</id>
+                        <firstName>vasia</firstName>
+                        <lastName>pupkin</lastName>
+                        <salary>5585</salary>
+                        <licenseYear>01/01/2011</licenseYear>
+                    </driver>
+                </repairPrices>
+            </track>
+            <track>
+                <id>4</id>
+                <brand>volvo</brand>
+                <model>nh</model>
+                <carryingCapacity>20</carryingCapacity>
+                <dateOfService>01/01/2017</dateOfService>
+                <regNumber>2185</regNumber>
+                <repairPrices>
+                    <id>3</id>
+                    <service>
+                        <id>1</id>
+                        <serviceName>sto</serviceName>
+                        <phoneNumber>12134</phoneNumber>
+                        <address>
+                            <id>8</id>
+                            <country>
+<id>1</id>
+<countryName>belarus</countryName>
+<fare>100</fare>
+<roadQuality>good</roadQuality>
+                            </country>
+                            <city>
+<id>1</id>
+<cityName>minsk</cityName>
+                            </city>
+                            <street>
+<id>5</id>
+<streetName>pobediteley</streetName>
+                            </street>
+                        </address>
+                    </service>
+                    <date>01/01/2012</date>
+                    <driver>
+                        <id>1</id>
+                        <firstName>petia</firstName>
+                        <lastName>poroshenko</lastName>
+                        <salary>1000000</salary>
+                        <licenseYear>01/01/2000</licenseYear>
+                    </driver>
+                </repairPrices>
+            </track>
+            <track>
+                <id>5</id>
+                <brand>mb</brand>
+                <model>actros</model>
+                <carryingCapacity>25</carryingCapacity>
+                <dateOfService>01/01/2018</dateOfService>
+                <regNumber>2745</regNumber>
+                <repairPrices>
+                    <id>4</id>
+                    <service>
+                        <id>2</id>
+                        <serviceName>diselservis</serviceName>
+                        <phoneNumber>1234</phoneNumber>
+                        <address>
+                            <id>9</id>
+                            <country>
+<id>1</id>
+<countryName>belarus</countryName>
+<fare>100</fare>
+<roadQuality>good</roadQuality>
+                            </country>
+                            <city>
+<id>1</id>
+<cityName>minsk</cityName>
+                            </city>
+                            <street>
+<id>4</id>
+<streetName>skoriny</streetName>
+                            </street>
+                        </address>
+                    </service>
+                    <date>01/01/2012</date>
+                    <driver>
+                        <id>1</id>
+                        <firstName>petia</firstName>
+                        <lastName>poroshenko</lastName>
+                        <salary>1000000</salary>
+                        <licenseYear>01/01/2000</licenseYear>
+                    </driver>
+                </repairPrices>
+            </track>
+            <track>
+                <id>6</id>
+                <brand>mb</brand>
+                <model>atego</model>
+                <carryingCapacity>18</carryingCapacity>
+                <dateOfService>01/01/2012</dateOfService>
+                <regNumber>1274</regNumber>
+                <checkFares>
+                    <id>7</id>
+                    <country>
+                        <id>5</id>
+                        <countryName>france</countryName>
+                        <fare>350</fare>
+                        <roadQuality>normal</roadQuality>
+                    </country>
+                    <date>01/01/2017</date>
+                    <driver>
+                        <id>1</id>
+                        <firstName>petia</firstName>
+                        <lastName>poroshenko</lastName>
+                        <salary>1000000</salary>
+                        <licenseYear>01/01/2000</licenseYear>
+                    </driver>
+                </checkFares>
+                <repairPrices>
+                    <id>5</id>
+                    <service>
+                        <id>3</id>
+                        <serviceName>shinomontazh</serviceName>
+                        <phoneNumber>4521</phoneNumber>
+                        <address>
+                            <id>8</id>
+                            <country>
+<id>1</id>
+<countryName>belarus</countryName>
+<fare>100</fare>
+<roadQuality>good</roadQuality>
+                            </country>
+                            <city>
+<id>1</id>
+<cityName>minsk</cityName>
+                            </city>
+                            <street>
+<id>5</id>
+<streetName>pobediteley</streetName>
+                            </street>
+                        </address>
+                    </service>
+                    <date>01/01/2012</date>
+                    <driver>
+                        <id>2</id>
+                        <firstName>masha</firstName>
+                        <lastName>ivanova</lastName>
+                        <salary>2356</salary>
+                        <licenseYear>01/01/2014</licenseYear>
+                    </driver>
+                </repairPrices>
+            </track>
+            <track>
+                <id>7</id>
+                <brand>iveco</brand>
+                <model>daily</model>
+                <carryingCapacity>5</carryingCapacity>
+                <dateOfService>01/01/2013</dateOfService>
+                <regNumber>1111</regNumber>
+            </track>
+            <track>
+                <id>8</id>
+                <brand>maz</brand>
+                <model>5440</model>
+                <carryingCapacity>16</carryingCapacity>
+                <dateOfService>01/01/2017</dateOfService>
+                <regNumber>3741</regNumber>
+            </track>
+            <track>
+                <id>9</id>
+                <brand>man</brand>
+                <model>1805</model>
+                <carryingCapacity>20</carryingCapacity>
+                <dateOfService>01/01/2007</dateOfService>
+                <regNumber>5463</regNumber>
+            </track>
+        </tracks>
+    </Company>
+</companies>
