@@ -36,7 +36,7 @@ public class ThreadExample extends Thread {
 		} catch (SQLException e) {
 			logger.log(Level.ERROR, "Can't read");
 		}
-		 cp.returnConnection(conn);
+//		 cp.returnConnection(conn);
 		logger.log(Level.INFO, "Thread" + (this.getId() - 14) + " was closed");
 
 	}

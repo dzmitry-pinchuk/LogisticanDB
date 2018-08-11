@@ -1,2 +1,2 @@
 # LogisticanDB
-Connect with BD, set info about users
+Connect to BD, get info about users
