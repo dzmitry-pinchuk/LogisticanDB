@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper 
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="by.pinchuk.dao.people.ILogistician">
+
+
+
+	<resultMap id="logistician" type="by.pinchuk.table.people.Logistician">
+
+		<id column="id" property="id"/>
+		<result column="first_name" property="firstName"/>
+		<result column="last_name" property="lastName"/>
+		<result column="salary" property="salary"/>
+		<result column="year_of_start_work" property="yearOfStartWork"/>
+		
+		<collection 
+			property="consignees"
+			column="id"
+			javaType="ArrayList"
+			ofType="by.pinchuk.table.company.Consignee"
+			select="by.pinchuk.xml.ConsigneeMapper.getConsigneeByLogistID"
+		/>
+		
+		<collection 
+			property="shipers"
+			column="id"
+			javaType="ArrayList"
+			ofType="by.pinchuk.table.company.Shipper"
+			select="by.pinchuk.xml.ShipperMapper.getShipperByLogistID"
+		/>
+		
+		<collection 
+			property="customs"
+			column="id"
+			javaType="ArrayList"
+			ofType="by.pinchuk.table.people.Custom"
+			select="by.pinchuk.xml.CustomMapper.getCustomByLogistID"
+		/>
+		
+	</resultMap>
+
+	<select id="allLogistician" resultMap="logistician">
+        SELECT l.id, e.first_name, e.last_name, l.year_of_start_work, e.salary from logisticians l LEFT JOIN employee e ON l.Employee_id = e.id
+    </select>
+    
+    <select id="selectById" parameterType="java.lang.Long" resultMap="logistician">
+        SELECT l.id, e.first_name, e.last_name, l.year_of_start_work, e.salary from logisticians l LEFT JOIN employee e ON l.Employee_id = e.id WHERE l.id = #{id}
+    </select>
+    
+</mapper>        

@@ -55,6 +55,11 @@ public class Country extends BaseEntity{
 		return countryName;
 	}
 	
+	public String toString2() {
+		return "Countries [id=" + getId() + ", countryName=" + countryName + ", fare=" + fare + ", roadQuality="
+				+ roadQuality + "]";
+	}
+	
 	
 
 

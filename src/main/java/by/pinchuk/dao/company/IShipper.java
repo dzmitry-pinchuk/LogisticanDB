@@ -1,5 +1,6 @@
 package by.pinchuk.dao.company;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import by.pinchuk.table.company.Shipper;
@@ -14,5 +15,5 @@ public interface IShipper {
 
 	public void createNewShipper(Shipper sh);
 	
-	
+	public ArrayList<Shipper> getShipperByLogistID(long id);
 }

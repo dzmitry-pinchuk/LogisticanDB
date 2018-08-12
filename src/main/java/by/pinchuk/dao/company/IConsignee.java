@@ -1,12 +1,12 @@
 package by.pinchuk.dao.company;
 
-import java.util.List;
+import java.util.ArrayList;
 
 import by.pinchuk.table.company.Consignee;
 
 public interface IConsignee {
 
-	public List<Consignee> allConsignee();
+	public ArrayList<Consignee> allConsignee();
 
 	public Consignee selectById(long id);
 
@@ -14,4 +14,5 @@ public interface IConsignee {
 
 	public void createNewConsignee(Consignee con);
 
+	public ArrayList<Consignee> getConsigneeByLogistID(long id);
 }

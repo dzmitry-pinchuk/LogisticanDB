@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper 
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="by.pinchuk.dao.payment.IRepairPrice">
+
+
+
+	<resultMap id="repairPrice" type="by.pinchuk.table.payment.RepairPrice">
+
+		<id column="id" property="id"/>
+		<result column="date" property="date"/>
+		
+		<association 
+			property="service" 
+			column="services_id" 
+			javaType="by.pinchuk.table.transport.Service" 
+			select="by.pinchuk.xml.ServiceMapper.selectById"/>
+			
+		<association 
+			property="driver" 
+			column="Drivers_id" 
+			javaType="by.pinchuk.table.people.Driver" 
+			select="by.pinchuk.xml.DriverMapper.selectById"/>
+			
+	</resultMap>
+	
+	
+	<select id="allRepairPrice" resultMap="repairPrice">
+        SELECT * FROM repair_priсe
+    </select>
+    
+    <select id="selectById" parameterType="java.lang.Long" resultMap="repairPrice">
+        SELECT * FROM repair_priсe WHERE id=#{id}
+    </select>
+    
+    <select id="allRepairPriceByTrackId" parameterType="java.lang.Long" resultMap="repairPrice">
+    	SELECT * FROM repair_priсe WHERE tracs_id = #{id}
+    </select>
+
+</mapper>        

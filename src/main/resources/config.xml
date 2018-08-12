@@ -22,6 +22,14 @@
 		<mapper resource="by/pinchuk/xml/ConsigneeMapper.xml"/>
 		<mapper resource="by/pinchuk/xml/AddressMapper.xml"/>
 		<mapper resource="by/pinchuk/xml/CountryMapper.xml"/>
+		<mapper resource="by/pinchuk/xml/ShipperMapper.xml"/>
+		<mapper resource="by/pinchuk/xml/ServiceMapper.xml"/>
+		<mapper resource="by/pinchuk/xml/ServiceMapper.xml"/>
+		<mapper resource="by/pinchuk/xml/RepairPriceMapper.xml"/>
+		<mapper resource="by/pinchuk/xml/CheckFareMapper.xml"/>
+		<mapper resource="by/pinchuk/xml/LogisticianMapper.xml"/>
+		<mapper resource="by/pinchuk/xml/DriverMapper.xml"/>
+		<mapper resource="by/pinchuk/xml/CompanyMapper.xml"/>
 		
 	</mappers>
 </configuration> 

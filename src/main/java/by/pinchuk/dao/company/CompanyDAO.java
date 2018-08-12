@@ -23,7 +23,7 @@ public class CompanyDAO extends JDBCAbstractDAO implements ICompany{
 	private static Logger logger = LogManager.getLogger();
 	
 	private static final String SQL_SELECT_ALL_COMPANY = "SELECT * FROM ñompanies";
-	private static final String SQL_SELECT_BY_ID = "SELECT * FROM ñompanies WHERE c.id=?";
+	private static final String SQL_SELECT_BY_ID = "SELECT * FROM ñompanies WHERE id=?";
 	private static final String SQL_DELETE_BY_ID = "DELETE FROM ñompanies WHERE id = ?";
 	
 	@Override

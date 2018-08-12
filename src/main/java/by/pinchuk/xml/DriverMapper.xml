@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper 
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="by.pinchuk.dao.people.IDriver">
+
+	<resultMap id="driver" type="by.pinchuk.table.people.Driver">
+		<id column="id" property="id"/>
+		<result column="first_name" property="firstName"/>
+		<result column="last_name" property="lastName"/>
+		<result column="salary" property="salary"/>
+		<result column="license_year" property="licenseYear"/>
+		
+	</resultMap>
+
+    <select id="allDrivers" resultMap="driver">
+        SELECT d.id, e.first_name, e.last_name, d.license_year, e.salary from drivers d LEFT JOIN employee e ON d.Employee_id = e.id
+    </select>
+
+	<select id="selectById" parameterType="java.lang.Long" resultMap="driver">
+		SELECT d.id, e.first_name, e.last_name, d.license_year, e.salary from drivers d LEFT JOIN employee e ON d.Employee_id = e.id WHERE d.ID=#{id}
+    </select>	
+    
+
+</mapper>

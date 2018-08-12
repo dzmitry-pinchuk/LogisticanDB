@@ -144,21 +144,17 @@ public class ConsigneeDAO extends JDBCAbstractDAO implements IConsignee {
 		PreparedStatement ps = null;
 		ResultSet rs = null;
 		try {
-//			logger.log(Level.INFO, "try to create list getConsigneeByLogistID");
 			conn = getConnection();
 			ps = conn.prepareStatement(SQL_SELECT_CONSIGNEE_BY_LOGIST_ID);
 			ps.setLong(1, id);
 			rs = ps.executeQuery();
 			while (rs.next()) {
-//				logger.log(Level.INFO, "Consignee_id = " + rs.getInt("Consignee_id"));
 				consigneesByLogistID.add(selectById(rs.getInt("Consignee_id")));
-//				logger.log(Level.INFO, "Consignee added in list");
 			}
 		} catch (SQLException e) {
 			logger.log(Level.ERROR, "SQLException. Can not read from field: " + e);
 		} finally {
 			endOperation(ps, conn, rs);
-//			logger.log(Level.INFO, consigneesByLogistID);
 		}
 		return consigneesByLogistID;
 	}

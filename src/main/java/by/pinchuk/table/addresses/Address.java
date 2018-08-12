@@ -15,6 +15,11 @@ public class Address extends BaseEntity{
 	
 	public Address() {
 	}
+	
+	public Address(long id) {
+		setId(id);
+	}
+	
 
 	public Address(Country country, City city, Street street) {
 		this.country = country;

@@ -6,14 +6,35 @@
 
 	<resultMap id="address" type="by.pinchuk.table.addresses.Address">
 		<id column="id" property="id"/>
-		<association property="country" column="countries_id" javaType="by.pinchuk.table.addresses.Country" select="by/pinchuk/xml/CountryMapper.selectById" fetchType="eager" />
-		<association property="city" column="cities_id" javaType="by.pinchuk.table.addresses.City" select="by/pinchuk/xml/CountryMapper.selectById" fetchType="eager" />
-		<association property="street" column="streets_id" javaType="by.pinchuk.table.addresses.Street" select="by/pinchuk/xml/CountryMapper.selectById" fetchType="eager" />
-
+		<association property="country" resultMap="country"/>
+		<association property="city" resultMap="city"/>
+		<association property="street" resultMap="street"/>
 	</resultMap>
 	
-	<select id="selectById" parameterType="java.lang.Long" resultMap="address">
-	   SELECT * FROM  mydb.adresses WHERE id=#{id}
+	<resultMap id="country" type="by.pinchuk.table.addresses.Country">
+		<id column="countries_id" property="id"/>
+		<result column="country_name" property="countryName"/>
+		<result column="fare" property="fare"/>
+		<result column="road_quality" property="roadQuality"/>
+	</resultMap>
+	
+	<resultMap id="city" type="by.pinchuk.table.addresses.City">
+		<id column="cities_id" property="id"/>
+		<result column="cities_name" property="cityName"/>
+	</resultMap>
+	
+	<resultMap id="street" type="by.pinchuk.table.addresses.Street">
+		<id column="streets_id" property="id"/>
+		<result column="street_name" property="streetName"/>
+	</resultMap>
+	
+	<select id="allAddresses" resultMap="address">
+	   SELECT * FROM adresses adr LEFT JOIN countries c ON adr.countries_id = c.id LEFT JOIN cities ct ON adr.cities_id = ct.id LEFT JOIN streets s ON adr.streets_id = s.id
     </select>
-
+	
+	
+	<select id="selectById" parameterType="java.lang.Long" resultMap="address">
+	   SELECT * FROM adresses adr LEFT JOIN countries c ON adr.countries_id = c.id LEFT JOIN cities ct ON adr.cities_id = ct.id LEFT JOIN streets s ON adr.streets_id = s.id WHERE adr.id = #{id}
+    </select>
+    
 </mapper>     

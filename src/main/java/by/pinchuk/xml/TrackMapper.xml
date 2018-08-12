@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper 
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="by.pinchuk.dao.transport.ITrack">
+
+
+
+	<resultMap id="track" type="by.pinchuk.table.transport.Track">
+
+		<id column="id" property="id"/>
+		<result column="brand" property="brand"/>
+		<result column="model" property="model"/>
+		<result column="carrying_capacity" property="carryingCapacity"/>
+		<result column="date_of_service" property="dateOfService"/>
+		<result column="reg_number" property="regNumber"/>
+		
+		<collection 
+			property="checkFares"
+			column="id"
+			javaType="ArrayList"
+			ofType="by.pinchuk.table.payment.CheckFare"
+			select="by.pinchuk.xml.CheckFaresMapper.allCheckFaresByTrackID"
+		/>
+		
+		<collection 
+			property="repairPrices"
+			column="id"
+			javaType="ArrayList"
+			ofType="by.pinchuk.table.payment.RepairPrice"
+			select="by.pinchuk.xml.RepairPriceMapper.allRepairPriceByTrackId"
+		/>
+		
+	</resultMap>
+
+	<select id="allTrack" resultMap="track">
+        SELECT * FROM mydb.сompanies
+    </select>
+    
+    <select id="selectById" parameterType="java.lang.Long" resultMap="track">
+        SELECT * FROM mydb.сompanies WHERE id= = #{id}
+    </select>
+    
+</mapper>        

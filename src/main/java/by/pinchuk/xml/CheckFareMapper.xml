@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper 
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="by.pinchuk.dao.payment.ICheckFares">
+
+	<resultMap id="checkFare" type="by.pinchuk.table.payment.CheckFare">
+
+		<id column="id" property="id"/>
+		<result column="date" property="date"/>
+		
+		<association 
+			property="country" 
+			column="countries_id" 
+			javaType="by.pinchuk.table.addresses.Country" 
+			select="by.pinchuk.xml.CountryMapper.selectById"/>
+			
+		<association 
+			property="driver" 
+			column="Drivers_id" 
+			javaType="by.pinchuk.table.people.Driver" 
+			select="by.pinchuk.xml.DriverMapper.selectById"/>
+			
+	</resultMap>
+	
+	
+	<select id="allCheckFares" resultMap="checkFare">
+        SELECT * FROM check_fares
+    </select>
+    
+    <select id="selectById" parameterType="java.lang.Long" resultMap="checkFare">
+       SELECT * FROM check_fares WHERE id=#{id}
+    </select>
+    
+    <select id="allCheckFaresByTrackID" parameterType="java.lang.Long" resultMap="checkFare">
+    	SELECT * FROM check_fares WHERE tracs_id = #{id}
+    </select>
+
+</mapper>        

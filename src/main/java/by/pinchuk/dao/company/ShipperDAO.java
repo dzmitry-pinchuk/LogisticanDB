@@ -167,7 +167,6 @@ public class ShipperDAO extends JDBCAbstractDAO implements IShipper {
 			logger.log(Level.ERROR, "SQLException. Can not read from field: " + e);
 		} finally {
 			endOperation(ps, conn, rs);
-//			logger.log(Level.INFO, shippers);
 		}
 		return shippers;
 	}

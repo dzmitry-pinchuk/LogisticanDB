@@ -1,5 +1,6 @@
 package by.pinchuk.dao.payment;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import by.pinchuk.table.payment.RepairPrice;
@@ -14,4 +15,5 @@ public interface IRepairPrice {
 
 	public void createNewRepairPrice(RepairPrice rp);
 
+	public ArrayList<RepairPrice> allRepairPriceByTrackId(long idTrack);
 }

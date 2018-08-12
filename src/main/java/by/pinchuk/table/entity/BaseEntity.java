@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 public abstract class BaseEntity {
 	
 	@JsonIgnore
-	private long id;
+	private Long id;
 
 	public long getId() {
 		return id;

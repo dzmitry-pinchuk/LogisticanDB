@@ -19,7 +19,6 @@ public class RunJaxB {
 
 	public static void main(String[] args) {
 		Logger logger = LogManager.getLogger();
-//		final String PATH = "src\\main\\resources\\data.xml";
 		final String PATH = "src/main/resources/GaxBGenerated.xml";
 		All all = new All();
 		ArrayList<Company> allCompany = all.getAll();

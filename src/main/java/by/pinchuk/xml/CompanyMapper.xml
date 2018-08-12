@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper 
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="by.pinchuk.dao.company.ICompany">
+
+
+
+	<resultMap id="company" type="by.pinchuk.table.company.Company">
+
+		<id column="id" property="id"/>
+		<result column="first_name" property="name"/>
+		<result column="last_name" property="regNumber"/>
+		
+		<association 
+			property="address" 
+			column="Adresses_id" 
+			javaType="by.pinchuk.table.addresses.Address" 
+			select="by.pinchuk.xml.AddressMapper.selectById"/>
+		
+		<collection 
+			property="tracks"
+			column="id"
+			javaType="ArrayList"
+			ofType="by.pinchuk.table.company.Consignee"
+			select="by.pinchuk.xml.TrackMapper.allTrack"
+		/>
+		
+		<collection 
+			property="logistican"
+			column="id"
+			javaType="ArrayList"
+			ofType="by.pinchuk.table.people.Logistician"
+			select="by.pinchuk.xml.LogisticianMapper.allLogistician"
+		/>
+		
+		<collection 
+			property="driver"
+			column="id"
+			javaType="ArrayList"
+			ofType="by.pinchuk.table.people.Driver"
+			select="by.pinchuk.xml.DriverMapper.allDrivers"
+		/>
+		
+	</resultMap>
+
+	<select id="allCompany" resultMap="company">
+        SELECT * FROM mydb.сompanies
+    </select>
+    
+    <select id="selectById" parameterType="java.lang.Long" resultMap="company">
+        SELECT * FROM mydb.сompanies WHERE id= #{id}
+    </select>
+    
+</mapper>        
