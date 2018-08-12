@@ -20,7 +20,7 @@
 			column="id"
 			javaType="ArrayList"
 			ofType="by.pinchuk.table.payment.CheckFare"
-			select="by.pinchuk.xml.CheckFaresMapper.allCheckFaresByTrackID"
+			select="resources.mappers.CheckFaresMapper.allCheckFaresByTrackID"
 		/>
 		
 		<collection 
@@ -28,7 +28,7 @@
 			column="id"
 			javaType="ArrayList"
 			ofType="by.pinchuk.table.payment.RepairPrice"
-			select="by.pinchuk.xml.RepairPriceMapper.allRepairPriceByTrackId"
+			select="resources.mappers.RepairPriceMapper.allRepairPriceByTrackId"
 		/>
 		
 	</resultMap>

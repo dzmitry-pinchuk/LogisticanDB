@@ -13,13 +13,13 @@
 			property="country" 
 			column="countries_id" 
 			javaType="by.pinchuk.table.addresses.Country" 
-			select="by.pinchuk.xml.CountryMapper.selectById"/>
+			select="resources.mappers.CountryMapper.selectById"/>
 			
 		<association 
 			property="driver" 
 			column="Drivers_id" 
 			javaType="by.pinchuk.table.people.Driver" 
-			select="by.pinchuk.xml.DriverMapper.selectById"/>
+			select="resources.mappers.DriverMapper.selectById"/>
 			
 	</resultMap>
 	

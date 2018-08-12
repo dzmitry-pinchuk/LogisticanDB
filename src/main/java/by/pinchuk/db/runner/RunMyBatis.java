@@ -80,21 +80,17 @@ public class RunMyBatis {
 //			ArrayList<Consignee> allCon = cons.allConsignee();
 //			System.out.println(allCon);
 			
-//			Shipper sh = ship.selectById(1);
-//			System.out.println(sh); 
+			Shipper sh = ship.selectById(1);
+			System.out.println(sh); 
 			
-			Logistician log = lo.selectById(1);
-			System.out.println(lo);
+//			Logistician log = lo.selectById(1);
+//			System.out.println(lo);
+//			
 			
 		} catch (IOException e) {
 			logger.log(Level.ERROR, "IOException: " + e.getMessage());
 		} 
-		
-		
-		
-		
-		
-		
+				
 	}
 
 }

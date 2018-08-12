@@ -15,13 +15,13 @@
 			property="service" 
 			column="services_id" 
 			javaType="by.pinchuk.table.transport.Service" 
-			select="by.pinchuk.xml.ServiceMapper.selectById"/>
+			select="resources.mappers.ServiceMapper.selectById"/>
 			
 		<association 
 			property="driver" 
 			column="Drivers_id" 
 			javaType="by.pinchuk.table.people.Driver" 
-			select="by.pinchuk.xml.DriverMapper.selectById"/>
+			select="resources.mappers.DriverMapper.selectById"/>
 			
 	</resultMap>
 	

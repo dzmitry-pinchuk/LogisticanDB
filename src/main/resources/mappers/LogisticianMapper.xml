@@ -17,7 +17,7 @@
 			column="id"
 			javaType="ArrayList"
 			ofType="by.pinchuk.table.company.Consignee"
-			select="by.pinchuk.xml.ConsigneeMapper.getConsigneeByLogistID"
+			select="resources.mappers..ConsigneeMapper.getConsigneeByLogistID"
 		/>
 		
 		<collection 
@@ -25,7 +25,7 @@
 			column="id"
 			javaType="ArrayList"
 			ofType="by.pinchuk.table.company.Shipper"
-			select="by.pinchuk.xml.ShipperMapper.getShipperByLogistID"
+			select="resources.mappers.ShipperMapper.getShipperByLogistID"
 		/>
 		
 		<collection 
@@ -33,7 +33,7 @@
 			column="id"
 			javaType="ArrayList"
 			ofType="by.pinchuk.table.people.Custom"
-			select="by.pinchuk.xml.CustomMapper.getCustomByLogistID"
+			select="resources.mappers.CustomMapper.getCustomByLogistID"
 		/>
 		
 	</resultMap>
