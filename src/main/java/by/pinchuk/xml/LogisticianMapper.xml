@@ -4,8 +4,6 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
 <mapper namespace="by.pinchuk.dao.people.ILogistician">
 
-
-
 	<resultMap id="logistician" type="by.pinchuk.table.people.Logistician">
 
 		<id column="id" property="id"/>

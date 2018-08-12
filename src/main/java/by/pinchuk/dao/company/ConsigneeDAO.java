@@ -138,7 +138,7 @@ public class ConsigneeDAO extends JDBCAbstractDAO implements IConsignee {
 		}	
 	}
 	
-	public ArrayList<Consignee> getConsigneeByLogistID(long id) {
+	public ArrayList<Consignee> getConsigneeByLogistID(Long id) {
 		ArrayList<Consignee> consigneesByLogistID = new ArrayList<>();
 		Connection conn = null;
 		PreparedStatement ps = null;

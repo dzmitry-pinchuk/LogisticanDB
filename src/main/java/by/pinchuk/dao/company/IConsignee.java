@@ -14,5 +14,5 @@ public interface IConsignee {
 
 	public void createNewConsignee(Consignee con);
 
-	public ArrayList<Consignee> getConsigneeByLogistID(long id);
+	public ArrayList<Consignee> getConsigneeByLogistID(Long id);
 }

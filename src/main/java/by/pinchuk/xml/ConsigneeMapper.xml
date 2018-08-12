@@ -27,7 +27,7 @@
     </select>
     
     <select id="getConsigneeByLogistID" parameterType="java.lang.Long" resultMap="consignee">
-    	SELECT c.id, c.consignee_name, c.phone_number, c.Adresses_id FROM consignee_has_logisticians chl LEFT JOIN consignee c ON chl.Consignee_id = c.id WHERE chl.Logisticians_id = 1;
+    	SELECT c.id, c.consignee_name, c.phone_number, c.Adresses_id FROM consignee_has_logisticians chl LEFT JOIN consignee c ON chl.Consignee_id = c.id WHERE chl.Logisticians_id = #{id}
     </select>
     
 
