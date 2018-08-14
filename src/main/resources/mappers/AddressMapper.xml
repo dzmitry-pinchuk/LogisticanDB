@@ -33,7 +33,7 @@
     </select>
 	
 	
-	<select id="selectById" parameterType="java.lang.Long" resultMap="address">
+	<select id="selectById" parameterType="string" resultMap="address">
 	   SELECT * FROM adresses adr LEFT JOIN countries c ON adr.countries_id = c.id LEFT JOIN cities ct ON adr.cities_id = ct.id LEFT JOIN streets s ON adr.streets_id = s.id WHERE adr.id = #{Adresses_id}
     </select>
     

@@ -15,7 +15,7 @@
 			property="address" 
 			column="Adresses_id" 
 			javaType="by.pinchuk.table.addresses.Address" 
-			select="resources.mappers.AddressMapper.selectById"/>
+			select="by.pinchuk.dao.addresses.IAddress.selectById"/>
 	</resultMap>
 	
 	

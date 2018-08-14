@@ -12,7 +12,7 @@ import org.apache.logging.log4j.Logger;
 
 import by.pinchuk.connection.pool.ConnectionPool;
 
-public class JDBCAbstractDAO {
+public abstract class JDBCAbstractDAO {
 
 	private static Logger logger = LogManager.getLogger();
 	private ConnectionPool cp = ConnectionPool.getCp();
