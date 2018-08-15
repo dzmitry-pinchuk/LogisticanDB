@@ -20,7 +20,7 @@
 			column="id"
 			javaType="ArrayList"
 			ofType="by.pinchuk.table.payment.CheckFare"
-			select="resources.mappers.CheckFaresMapper.allCheckFaresByTrackID"
+			select="by.pinchuk.dao.payment.ICheckFares.allCheckFaresByTrackID"
 		/>
 		
 		<collection 
@@ -28,17 +28,17 @@
 			column="id"
 			javaType="ArrayList"
 			ofType="by.pinchuk.table.payment.RepairPrice"
-			select="resources.mappers.RepairPriceMapper.allRepairPriceByTrackId"
+			select="by.pinchuk.dao.payment.IRepairPrice.allRepairPriceByTrackId"
 		/>
 		
 	</resultMap>
 
 	<select id="allTrack" resultMap="track">
-        SELECT * FROM mydb.сompanies
+        SELECT * FROM Tracs
     </select>
     
     <select id="selectById" parameterType="java.lang.Long" resultMap="track">
-        SELECT * FROM mydb.сompanies WHERE id= = #{id}
+        SELECT * FROM Tracs WHERE id= #{id}
     </select>
     
 </mapper>        

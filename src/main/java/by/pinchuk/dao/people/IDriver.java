@@ -1,12 +1,12 @@
 package by.pinchuk.dao.people;
 
-import java.util.List;
+import java.util.ArrayList;
 
 import by.pinchuk.table.people.Driver;
 
 public interface IDriver {
 	
-	public List<Driver> allDrivers();
+	public ArrayList<Driver> allDrivers();
 	
 	public Driver selectById(long id);
 	

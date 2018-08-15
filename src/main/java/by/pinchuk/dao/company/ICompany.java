@@ -1,12 +1,12 @@
 package by.pinchuk.dao.company;
 
-import java.util.List;
+import java.util.ArrayList;
 
 import by.pinchuk.table.company.Company;
 
 public interface ICompany {
 
-	public List<Company> allCompany();
+	public ArrayList<Company> allCompany();
 
 	public Company selectById(long id);
 

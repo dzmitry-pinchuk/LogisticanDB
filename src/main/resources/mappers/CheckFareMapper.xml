@@ -13,16 +13,14 @@
 			property="country" 
 			column="countries_id" 
 			javaType="by.pinchuk.table.addresses.Country" 
-			select="resources.mappers.CountryMapper.selectById"/>
+			select="by.pinchuk.dao.addresses.ICountry.selectById"/>
 			
 		<association 
 			property="driver" 
 			column="Drivers_id" 
 			javaType="by.pinchuk.table.people.Driver" 
-			select="resources.mappers.DriverMapper.selectById"/>
-			
-	</resultMap>
-	
+			select="by.pinchuk.dao.people.IDriver.selectById"/>
+	</resultMap>	
 	
 	<select id="allCheckFares" resultMap="checkFare">
         SELECT * FROM check_fares

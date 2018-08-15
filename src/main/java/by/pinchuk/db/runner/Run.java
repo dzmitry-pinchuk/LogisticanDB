@@ -11,10 +11,13 @@ import by.pinchuk.dao.addresses.AddressDAO;
 import by.pinchuk.dao.company.ConsigneeDAO;
 import by.pinchuk.dao.payment.RepairPriceDAO;
 import by.pinchuk.dao.people.CustomDAO;
+import by.pinchuk.dao.people.ILogistician;
 import by.pinchuk.dao.transport.ServiceDAO;
 import by.pinchuk.db.actions.ConstractorThread;
 import by.pinchuk.db.actions.ThreadExample;
+import by.pinchuk.service.All;
 import by.pinchuk.service.RepairPriceService;
+import by.pinchuk.table.company.Company;
 import by.pinchuk.table.payment.RepairPrice;
 import by.pinchuk.table.people.Employee;
 import by.pinchuk.table.people.Logistician;
@@ -52,12 +55,6 @@ public class Run {
 //		logger.log(Level.INFO, "allCastoms" + cas.allCustoms().toString());
 //		logger.log(Level.INFO, "allCastoms" + cas.selectById().toString());
 		
-		
-//		logger.log(Level.INFO, "start thread");
-//		for (int i = 0; i <20; i++) {
-//			new ThreadExample(ConnectionPool.getCp()).start();
-//		}
-		
 
 //		Track t = new Track();
 //		t.setId(1);
@@ -76,8 +73,14 @@ public class Run {
 //		AddressDAO adrDAO = new AddressDAO();
 //		System.out.println(adrDAO.selectById(2));
 		
+		All all = new All();
+		ArrayList<Company> allCompany = all.getAll();
+		System.out.println(allCompany);
 		
 		
+//		ILogistician lolo = MyBatisUtil.getSsf().openSession().getMapper(ILogistician.class);
+//		Logistician log = lolo.selectById(1);
+//		System.out.println(log);
 		
 	}
 

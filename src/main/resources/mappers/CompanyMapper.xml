@@ -9,21 +9,21 @@
 	<resultMap id="company" type="by.pinchuk.table.company.Company">
 
 		<id column="id" property="id"/>
-		<result column="first_name" property="name"/>
-		<result column="last_name" property="regNumber"/>
+		<result column="name" property="name"/>
+		<result column="reg_number" property="regNumber"/>
 		
 		<association 
 			property="address" 
-			column="Adresses_id" 
+			column="address_id" 
 			javaType="by.pinchuk.table.addresses.Address" 
-			select="resources.mappers.AddressMapper.selectById"/>
+			select="by.pinchuk.dao.addresses.IAddress.selectById"/>
 		
 		<collection 
 			property="tracks"
 			column="id"
 			javaType="ArrayList"
 			ofType="by.pinchuk.table.company.Consignee"
-			select="resources.mappers.TrackMapper.allTrack"
+			select="by.pinchuk.dao.transport.ITrack.allTrack"
 		/>
 		
 		<collection 
@@ -31,7 +31,7 @@
 			column="id"
 			javaType="ArrayList"
 			ofType="by.pinchuk.table.people.Logistician"
-			select="resources.mappers.LogisticianMapper.allLogistician"
+			select="by.pinchuk.dao.people.ILogistician.allLogistician"
 		/>
 		
 		<collection 
@@ -39,7 +39,7 @@
 			column="id"
 			javaType="ArrayList"
 			ofType="by.pinchuk.table.people.Driver"
-			select="resources.mappers.DriverMapper.allDrivers"
+			select="by.pinchuk.dao.people.IDriver.allDrivers"
 		/>
 		
 	</resultMap>

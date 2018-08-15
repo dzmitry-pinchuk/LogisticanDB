@@ -19,7 +19,7 @@ public class RunJaxB {
 
 	public static void main(String[] args) {
 		Logger logger = LogManager.getLogger();
-		final String PATH = "src/main/resources/GaxBGenerated.xml";
+		final String PATH = "src/main/resources/JaxBGenerated.xml";
 		All all = new All();
 		ArrayList<Company> allCompany = all.getAll();
 		Companies comp = new Companies();
@@ -33,9 +33,7 @@ public class RunJaxB {
 		} catch (JAXBException e) {
 			logger.log(Level.ERROR, "JAXBException: " + e);
 		}
+
 		
-		System.out.println(allCompany.get(0).getAddress().getCity().getId());
-		
-		// some code here
 	}
 }

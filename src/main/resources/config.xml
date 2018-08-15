@@ -18,19 +18,17 @@
 		</environment> 
 	</environments> 
 	<mappers>
-	
-		<mapper resource="mappers/CustomMapper.xml"/>
-		<mapper resource="mappers/ConsigneeMapper.xml"/>
 		<mapper resource="mappers/AddressMapper.xml"/>
-		<mapper resource="mappers/CountryMapper.xml"/>
-		<mapper resource="mappers/ShipperMapper.xml"/>
-		<mapper resource="mappers/ServiceMapper.xml"/>
-		<mapper resource="mappers/ServiceMapper.xml"/>
-		<mapper resource="mappers/RepairPriceMapper.xml"/>
 		<mapper resource="mappers/CheckFareMapper.xml"/>
-		<mapper resource="mappers/LogisticianMapper.xml"/>
-		<mapper resource="mappers/DriverMapper.xml"/>
 		<mapper resource="mappers/CompanyMapper.xml"/>
-		
+		<mapper resource="mappers/ConsigneeMapper.xml"/>
+		<mapper resource="mappers/CountryMapper.xml"/>
+		<mapper resource="mappers/CustomMapper.xml"/>
+		<mapper resource="mappers/DriverMapper.xml"/>
+		<mapper resource="mappers/LogisticianMapper.xml"/>
+		<mapper resource="mappers/RepairPriceMapper.xml"/>
+		<mapper resource="mappers/ServiceMapper.xml"/>
+		<mapper resource="mappers/ShipperMapper.xml"/>
+		<mapper resource="mappers/TrackMapper.xml"/>
 	</mappers>
 </configuration> 

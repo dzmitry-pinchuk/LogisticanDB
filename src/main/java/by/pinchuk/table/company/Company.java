@@ -84,11 +84,8 @@ public class Company extends BaseEntity{
 	
 	@Override
 	public String toString() {
-		return "Company [name=" + name + ", regNumber=" + regNumber + "Address"+ this.address.toString()
-		+ "\n Tracks " + this.tracks + " \n Drivers "+ this.driver + "\n Logisticans "+ this.logistican +
-			
-				
-		"] \n";
+		return "Company [name=" + name + ", regNumber=" + regNumber + " Address="+ this.address
+		+ "\n Tracks " + this.tracks + " \n Drivers "+ this.driver + "\n Logisticans "+ this.logistican +"] \n";
 	}
 
 }

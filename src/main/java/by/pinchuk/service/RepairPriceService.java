@@ -1,7 +1,10 @@
 package by.pinchuk.service;
 
 import by.pinchuk.dao.addresses.AddressDAO;
+import by.pinchuk.dao.addresses.IAddress;
 import by.pinchuk.dao.people.DriverDAO;
+import by.pinchuk.dao.people.IDriver;
+import by.pinchuk.dao.transport.IService;
 import by.pinchuk.dao.transport.ServiceDAO;
 import by.pinchuk.table.addresses.Address;
 import by.pinchuk.table.payment.RepairPrice;
@@ -11,10 +14,13 @@ import by.pinchuk.table.transport.Service;
 
 public class RepairPriceService {
 	
-	private ServiceDAO sDAO = new ServiceDAO();
-	private DriverDAO dDAO = new DriverDAO();
-//	private ServiceService ss = new ServiceService();
-	private AddressDAO adrDAO = new AddressDAO();
+//	private ServiceDAO sDAO = new ServiceDAO();
+//	private DriverDAO dDAO = new DriverDAO();
+//	private AddressDAO adrDAO = new AddressDAO();
+	
+	private IDriver dDAO;
+	private IAddress adrDAO;
+	private IService sDAO;
 	
 	public RepairPrice setRepairPriceField(RepairPrice rp) {
 		Service service = rp.getService();
@@ -26,14 +32,6 @@ public class RepairPriceService {
 		rp.setDriver(dDAO.selectById(driver.getId()));
 		return rp;
 	}
-	
-//	public RepairPrice setRepairPriceField(RepairPrice rp) {
-//		Service service = rp.getService();
-//		rp.setService(ss.setServiceField(sDAO.selectById(service.getId())));
-//		Driver driver = rp.getDriver();
-//		rp.setDriver(dDAO.selectById(driver.getId()));
-//		return rp;
-//	}
 	
 
 }

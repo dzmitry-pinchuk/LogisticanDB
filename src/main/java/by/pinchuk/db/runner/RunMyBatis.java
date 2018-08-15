@@ -1,8 +1,14 @@
 package by.pinchuk.db.runner;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.List;
+
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -15,12 +21,15 @@ import org.mybatis.spring.SqlSessionTemplate;
 
 import by.pinchuk.dao.addresses.IAddress;
 import by.pinchuk.dao.addresses.ICountry;
+import by.pinchuk.dao.company.ICompany;
 import by.pinchuk.dao.company.IConsignee;
 import by.pinchuk.dao.company.IShipper;
 import by.pinchuk.dao.people.ICustom;
 import by.pinchuk.dao.people.ILogistician;
 import by.pinchuk.table.addresses.Address;
 import by.pinchuk.table.addresses.Country;
+import by.pinchuk.table.company.Companies;
+import by.pinchuk.table.company.Company;
 import by.pinchuk.table.company.Consignee;
 import by.pinchuk.table.company.Shipper;
 import by.pinchuk.table.people.Custom;
@@ -37,6 +46,9 @@ public class RunMyBatis {
 			
 			
 			InputStream is = Resources.getResourceAsStream("config.xml");
+			
+			
+		
 //			SqlSessionFactory ssf = new SqlSessionFactoryBuilder().build(is);
 			ssf = new SqlSessionFactoryBuilder().build(is);
 			
@@ -80,13 +92,17 @@ public class RunMyBatis {
 //			ArrayList<Consignee> allCon = cons.allConsignee();
 //			System.out.println(allCon);
 			
-			Shipper sh = ship.selectById(1);
-			System.out.println(sh); 
+//			Shipper sh = ship.selectById(1);
+//			System.out.println(sh); 
 			
 //			Logistician log = lo.selectById(1);
-//			System.out.println(lo);
-//			
-			
+//			System.out.println(log);
+
+			ICompany comp = ssf.openSession().getMapper(ICompany.class);
+			List<Company>listAllCompany = new ArrayList<>();
+					listAllCompany = comp.allCompany();
+			System.out.println(listAllCompany);
+	
 		} catch (IOException e) {
 			logger.log(Level.ERROR, "IOException: " + e.getMessage());
 		} 

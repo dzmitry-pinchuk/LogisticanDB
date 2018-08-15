@@ -28,13 +28,23 @@
 		<result column="street_name" property="streetName"/>
 	</resultMap>
 	
+	<resultMap id="addressOnlyId" type="by.pinchuk.table.addresses.Address">
+		<id column="id" property="id"/>
+	</resultMap>
+	
+	
 	<select id="allAddresses" resultMap="address">
 	   SELECT * FROM adresses adr LEFT JOIN countries c ON adr.countries_id = c.id LEFT JOIN cities ct ON adr.cities_id = ct.id LEFT JOIN streets s ON adr.streets_id = s.id
     </select>
 	
 	
-	<select id="selectById" parameterType="string" resultMap="address">
+	<select id="selectById" parameterType="long" resultMap="address">
 	   SELECT * FROM adresses adr LEFT JOIN countries c ON adr.countries_id = c.id LEFT JOIN cities ct ON adr.cities_id = ct.id LEFT JOIN streets s ON adr.streets_id = s.id WHERE adr.id = #{Adresses_id}
     </select>
+    
+    <select id="getAddressIdOnly" parameterType="string" resultMap="addressOnlyId">
+	   SELECT * FROM adresses  WHERE id = #{Adresses_id}
+    </select>
+    
     
 </mapper>     
