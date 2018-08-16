@@ -17,7 +17,7 @@ public class All {
 	
 	private CompanyService cs = new CompanyService();
 //	private CompanyDAO cDAO = new CompanyDAO();
-	private ICompany cDAO = MyBatisUtil.getSsf().openSession().getMapper(ICompany.class);
+	private ICompany cDAO = MyBatisUtil.getSsf().openSession(true).getMapper(ICompany.class);
 	private static final Logger logger = LogManager.getLogger();
 	
 	public ArrayList<Company> getAll() {

@@ -64,17 +64,17 @@ public class CompanyService {
 //	private IConsignee conDAO;
 //	private IShipper shDAO;
 	
-	private IAddress adrDAO = MyBatisUtil.getSsf().openSession().getMapper(IAddress.class);
-	private IDriver dDAO = MyBatisUtil.getSsf().openSession().getMapper(IDriver.class);
-	private ITrack tDAO = MyBatisUtil.getSsf().openSession().getMapper(ITrack.class);
-	private ILogistician lDAO = MyBatisUtil.getSsf().openSession().getMapper(ILogistician.class);
-	private IRepairPrice rpDAO = MyBatisUtil.getSsf().openSession().getMapper(IRepairPrice.class);
-	private ICheckFares cfDAO = MyBatisUtil.getSsf().openSession().getMapper(ICheckFares.class);
-	private ICountry cDAO = MyBatisUtil.getSsf().openSession().getMapper(ICountry.class);
-	private IService sDAO = MyBatisUtil.getSsf().openSession().getMapper(IService.class);
-	private ICustom cusDAO = MyBatisUtil.getSsf().openSession().getMapper(ICustom.class);
-	private IConsignee conDAO = MyBatisUtil.getSsf().openSession().getMapper(IConsignee.class);
-	private IShipper shDAO = MyBatisUtil.getSsf().openSession().getMapper(IShipper.class);
+	private IAddress adrDAO = MyBatisUtil.getSsf().openSession(true).getMapper(IAddress.class);
+	private IDriver dDAO = MyBatisUtil.getSsf().openSession(true).getMapper(IDriver.class);
+	private ITrack tDAO = MyBatisUtil.getSsf().openSession(true).getMapper(ITrack.class);
+	private ILogistician lDAO = MyBatisUtil.getSsf().openSession(true).getMapper(ILogistician.class);
+	private IRepairPrice rpDAO = MyBatisUtil.getSsf().openSession(true).getMapper(IRepairPrice.class);
+	private ICheckFares cfDAO = MyBatisUtil.getSsf().openSession(true).getMapper(ICheckFares.class);
+	private ICountry cDAO = MyBatisUtil.getSsf().openSession(true).getMapper(ICountry.class);
+	private IService sDAO = MyBatisUtil.getSsf().openSession(true).getMapper(IService.class);
+	private ICustom cusDAO = MyBatisUtil.getSsf().openSession(true).getMapper(ICustom.class);
+	private IConsignee conDAO = MyBatisUtil.getSsf().openSession(true).getMapper(IConsignee.class);
+	private IShipper shDAO = MyBatisUtil.getSsf().openSession(true).getMapper(IShipper.class);
 	
 	
 	public Company setCompanyField(Company company) {
