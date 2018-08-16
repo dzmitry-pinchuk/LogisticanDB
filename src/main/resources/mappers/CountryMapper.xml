@@ -18,5 +18,9 @@
     <select id="selectById" parameterType="java.lang.Long" resultMap="country">
         SELECT * FROM mydb.countries WHERE id =#{id}
     </select>
+    
+     <delete id="deleteById" parameterType="java.lang.Long">
+    	DELETE FROM countries WHERE id = #{id}
+    </delete>
 	
 </mapper>     

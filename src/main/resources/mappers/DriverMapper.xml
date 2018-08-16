@@ -21,5 +21,15 @@
 		SELECT d.id, e.first_name, e.last_name, d.license_year, e.salary from drivers d LEFT JOIN employee e ON d.Employee_id = e.id WHERE d.ID=#{id}
     </select>	
     
+    <delete id="deleteById" parameterType="java.lang.Long">
+    	DELETE FROM drivers WHERE id = #{id}
+    </delete>
+    
+    <insert id="createNewDriver" parameterType="by.pinchuk.table.people.Driver" keyProperty="id" useGeneratedKeys="true">
+	    BEGIN;
+	    	INSERT INTO employee (first_name, last_name, salary) VALUES (#{firstName},#{lastName},#{salary})
+	    	INSERT INTO drivers (license_year, Employee_id) VALUES (#{licenseYear}, LAST_INSERT_ID())
+	    COMMIT;
+    </insert>
 
 </mapper>

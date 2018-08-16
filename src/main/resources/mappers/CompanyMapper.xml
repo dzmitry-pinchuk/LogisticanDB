@@ -52,4 +52,8 @@
         SELECT * FROM mydb.сompanies WHERE id= #{id}
     </select>
     
+    <delete id="deleteById" parameterType="java.lang.Long">
+    	DELETE FROM сompanies WHERE id = #{id}
+    </delete>
+    
 </mapper>        

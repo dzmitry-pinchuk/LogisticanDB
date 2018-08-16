@@ -36,5 +36,9 @@
     <select id="allRepairPriceByTrackId" parameterType="java.lang.Long" resultMap="repairPrice">
     	SELECT * FROM repair_priсe WHERE tracs_id = #{id}
     </select>
-
+    
+    <delete id="deleteById" parameterType="java.lang.Long">
+    	DELETE FROM repair_priсe WHERE id = #{id}
+    </delete>
+    
 </mapper>        

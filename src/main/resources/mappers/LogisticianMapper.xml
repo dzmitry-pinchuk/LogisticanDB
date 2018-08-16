@@ -46,4 +46,16 @@
         SELECT l.id, e.first_name, e.last_name, l.year_of_start_work, e.salary from logisticians l LEFT JOIN employee e ON l.Employee_id = e.id WHERE l.id = #{id}
     </select>
     
+        <delete id="deleteById" parameterType="java.lang.Long">
+    	DELETE FROM logisticians WHERE id = #{id}
+    </delete>
+    
+    <insert id="createNewLogistician" parameterType="by.pinchuk.table.people.Logistician" keyProperty="id" useGeneratedKeys="true">
+	    BEGIN;
+	    	INSERT INTO employee (first_name, last_name, salary) VALUES (#{firstName},#{lastName},#{salary})
+	    	INSERT INTO logisticians (year_of_start_work, Employee_id) VALUES (#{yearOfStartWork}, LAST_INSERT_ID())
+	    COMMIT;
+    </insert>
+    
+    
 </mapper>        

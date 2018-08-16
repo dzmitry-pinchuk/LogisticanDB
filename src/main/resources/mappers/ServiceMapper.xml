@@ -27,5 +27,12 @@
 	    SELECT * FROM mydb.services WHERE id = #{id}
     </select>
     
+    <delete id="deleteById" parameterType="java.lang.Long">
+    	DELETE FROM services WHERE id = #{id}
+    </delete>
+    
+   	<insert id="createNewService" parameterType="by.pinchuk.table.transport.Service" keyProperty="id" useGeneratedKeys="true">
+		INSERT INTO services (service_name, phone_number) VALUES (#{serviceName},#{phoneNumber})
+    </insert>
     
 </mapper>   

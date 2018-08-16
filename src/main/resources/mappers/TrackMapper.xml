@@ -41,4 +41,13 @@
         SELECT * FROM Tracs WHERE id= #{id}
     </select>
     
+    <delete id="deleteById" parameterType="java.lang.Long">
+    	DELETE FROM tracs WHERE id = #{id}
+    </delete>
+    
+	<insert id="createNewTrack" parameterType="by.pinchuk.table.transport.Track" keyProperty="id" useGeneratedKeys="true">
+		INSERT INTO tracs (brand, model, carrying_capacity, date_of_service, reg_number) VALUES (#{brand},#{model},#{carryingCapacity},#{dateOfService},#{regNumber})"
+    </insert>
+    
+    
 </mapper>        

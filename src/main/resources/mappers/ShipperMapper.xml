@@ -28,5 +28,13 @@
     	SELECT s.id, s.shipper_name, s.phone_number, s.Adresses_id FROM shipper_has_logisticians shl LEFT JOIN shipper s ON shl.Shipper_id = s.id WHERE shl.Logisticians_id = #{id}
     </select>
     
+    <delete id="deleteById" parameterType="java.lang.Long">
+    	DELETE FROM Shipper WHERE id = #{id}
+    </delete>
+    
+    <insert id="createNewShipper" parameterType="by.pinchuk.table.company.Shipper" keyProperty="id" useGeneratedKeys="true">
+    	INSERT INTO Shipper (shipper_name, phone_number) VALUES (#{shipperName},#{phoneNumber})
+   </insert>
+    
     
 </mapper>       
